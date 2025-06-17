@@ -1,0 +1,116 @@
+<p-dialog
+  [header]="dialogTitle"
+  [modal]="true"
+  [(visible)]="visible"
+  [style]="{ width: '50rem' }">
+
+  <form [formGroup]="associateForm" (ngSubmit)="onSubmit()">
+    <div class="grid p-fluid">
+      <div class="col-12 md:col-6">
+        <app-form-input
+          id="name"
+          label="Name"
+          type="text"
+          placeholder="Enter full name"
+          [required]="true"
+          formControlName="name"
+          [errors]="name?.errors"
+          [touched]="name?.touched ?? false"
+          [dirty]="name?.dirty ?? false">
+        </app-form-input>
+      </div>
+
+      <div class="col-12 md:col-6">
+        <app-form-input
+          id="email"
+          label="Email"
+          type="email"
+          placeholder="Enter email address"
+          [required]="true"
+          formControlName="email"
+          [errors]="email?.errors"
+          [touched]="email?.touched ?? false"
+          [dirty]="email?.dirty ?? false">
+        </app-form-input>
+      </div>
+
+      <div class="col-12 md:col-6">
+        <app-form-input
+          id="phone"
+          label="Phone"
+          type="tel"
+          placeholder="Enter phone number"
+          [required]="true"
+          formControlName="phone"
+          [errors]="phone?.errors"
+          [touched]="phone?.touched ?? false"
+          [dirty]="phone?.dirty ?? false"
+          patternError="Please enter a valid Egyptian phone number">
+        </app-form-input>
+      </div>
+
+      <div class="col-12 md:col-6">
+        <app-form-input
+          id="type"
+          label="Type"
+          type="dropdown"
+          placeholder="Select associate type"
+          [options]="associateTypes"
+          formControlName="type"
+          >
+        </app-form-input>
+      </div>
+
+      <div class="col-12 md:col-6">
+        <app-form-input
+          id="group"
+          label="Associate Group"
+          type="dropdown"
+          placeholder="Select group"
+          [options]="associateGroups"
+          formControlName="associateGroup"
+          >
+        </app-form-input>
+      </div>
+
+      <div class="col-12 md:col-6">
+        <app-form-input
+          id="status"
+          label="Status"
+          type="switch"
+          formControlName="status">
+        </app-form-input>
+      </div>
+
+      <div class="col-12">
+        <app-form-input
+          id="address"
+          label="Address"
+          type="textarea"
+          placeholder="Enter full address"
+          [required]="true"
+          [rows]="3"
+          formControlName="address"
+          [errors]="address?.errors"
+          [touched]="address?.touched ?? false"
+          [dirty]="address?.dirty ?? false">
+        </app-form-input>
+      </div>
+    </div>
+  </form>
+
+  <ng-template pTemplate="footer">
+    <div class="flex justify-content-end gap-2">
+      <p-button
+        label="Cancel"
+        icon="pi pi-times"
+        (click)="closeDialog()"
+        severity="secondary" />
+      <p-button
+        [label]="submitButtonLabel"
+        icon="pi pi-check"
+        (click)="onSubmit()"
+        severity="primary" />
+    </div>
+  </ng-template>
+</p-dialog>

@@ -1,0 +1,164 @@
+<div class="card pt-5">
+  <!-- Header with Add Button -->
+  <div class="flex justify-content-between align-items-center mb-4">
+    <h2 class="text-2xl font-bold m-0">Associates</h2>
+    <p-button
+      (click)="showDialog()"
+      label="Add Associate"
+      icon="pi pi-plus"
+      severity="primary" />
+  </div>
+
+  <!-- Filters -->
+  <div class="filter-section flex gap-3">
+    <div class="flex-1">
+      <span class="p-input-icon-left w-full">
+        <i class="pi pi-search"></i>
+        <input
+          pInputText
+          type="text"
+          placeholder="Search associates..."
+          [(ngModel)]="globalFilter"
+          (ngModelChange)="applyFilters()"
+          class="w-full" />
+      </span>
+    </div>
+    <div class="w-20rem">
+      <p-dropdown
+        [options]="statusOptions"
+        [(ngModel)]="selectedStatus"
+        (ngModelChange)="applyFilters()"
+        placeholder="Filter by status"
+        optionLabel="label"
+        optionValue="value"
+        class="w-full" />
+    </div>
+  </div>
+
+  <!-- Table -->
+  <p-table
+    [value]="filteredAssociates"
+    [paginator]="true"
+    [rows]="rows"
+    [totalRecords]="totalRecords"
+    [first]="first"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [rowsPerPageOptions]="[5, 10, 25, 50]"
+    (onPage)="onPageChange($event)"
+    styleClass="p-datatable-sm"
+    responsiveLayout="scroll">
+
+    <!-- Name Column -->
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="name" style="min-width: 150px">
+          Name
+          <p-sortIcon field="name"></p-sortIcon>
+        </th>
+        <th pSortableColumn="email" style="min-width: 200px">
+          Email
+          <p-sortIcon field="email"></p-sortIcon>
+        </th>
+        <th pSortableColumn="phone" style="min-width: 120px">
+          Phone
+          <p-sortIcon field="phone"></p-sortIcon>
+        </th>
+        <th pSortableColumn="type" style="min-width: 100px">
+          Type
+          <p-sortIcon field="type"></p-sortIcon>
+        </th>
+        <th pSortableColumn="associateGroup" style="min-width: 120px">
+          Group
+          <p-sortIcon field="associateGroup"></p-sortIcon>
+        </th>
+        <th pSortableColumn="status" style="min-width: 100px">
+          Status
+          <p-sortIcon field="status"></p-sortIcon>
+        </th>
+        <th style="min-width: 100px">Actions</th>
+      </tr>
+    </ng-template>
+
+    <!-- Data Rows -->
+    <ng-template pTemplate="body" let-associate>
+      <tr>
+        <td>
+          <div class="font-semibold">{{ associate.name }}</div>
+        </td>
+        <td>
+          <a [href]="'mailto:' + associate.email" class="text-blue-400">{{ associate.email }}</a>
+        </td>
+        <td>
+          <div class="font-mono">{{ associate.phone }}</div>
+        </td>
+        <td>
+          @if (associate.type) {
+            <span class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 border-round-sm">
+              {{ getTypeLabel(associate.type) }}
+            </span>
+          }
+          @else {
+            <span class="px-2 py-1 text-xs font-medium bg-blue-400 border-round-sm">
+              Pending
+            </span>
+          }
+        </td>
+        <td>
+          @if (associate.associateGroup) {
+            <span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 border-round-sm">
+              {{ getGroupLabel(associate.associateGroup) }}
+            </span>
+          }
+          @else {
+            <span class="px-2 py-1 text-xs font-medium bg-blue-400 border-round-sm">
+              Pending
+            </span>
+          }
+        </td>
+        <td>
+          <p-tag
+            [value]="getStatusLabel(associate.status)"
+            [severity]="getStatusSeverity(associate.status)" />
+        </td>
+        <td>
+          <div class="flex gap-2">
+            <p-button
+              icon="pi pi-pencil"
+              size="small"
+              severity="secondary"
+              pTooltip="Edit Associate"
+              (onClick)="editAssociate(associate)"/>
+            <p-button
+              icon="pi pi-trash"
+              size="small"
+              severity="danger"
+              pTooltip="Delete Associate"
+              (onClick)="deleteAssociate(associate)" />
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+
+    <!-- Empty State -->
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="7" class="text-center py-8">
+          <div class="text-gray-500">
+            <i class="pi pi-users text-4xl mb-3"></i>
+            <p class="text-lg">No associates found</p>
+            <p class="text-sm">Try adjusting your search or filters</p>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <!-- Add Associate Dialog -->
+  <app-add-associate></app-add-associate>
+
+  <!-- Confirm Dialog for Delete -->
+  <p-confirmDialog></p-confirmDialog>
+</div>
+
+

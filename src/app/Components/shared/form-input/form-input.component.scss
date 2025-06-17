@@ -1,0 +1,18 @@
+.form-field {
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+// Fix dropdown positioning
+::ng-deep .p-dropdown-panel {
+  z-index: 1000 !important;
+}
+
+::ng-deep .p-dropdown {
+  width: 100% !important;
+}
+
+// Ensure dialog content doesn't interfere with dropdowns
+::ng-deep .p-dialog-content {
+  overflow: visible !important;
+}

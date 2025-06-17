@@ -1,0 +1,114 @@
+{
+  "Associates": [
+    {
+      "name": "Ahmed Hassan",
+      "email": "ahmed.hassan@company.com",
+      "phone": "01012345678",
+      "address": "123 Main Street, Cairo, Egypt",
+      "type": "part-time",
+      "associateGroup": "development",
+      "status": true,
+      "id": 1
+    },
+    {
+      "name": "Fatima Ali",
+      "email": "fatima.ali@company.com",
+      "phone": "01123456789",
+      "address": "456 Garden Avenue, Alexandria, Egypt",
+      "type": "full-time",
+      "associateGroup": "design",
+      "status": false,
+      "id": 2
+    },
+    {
+      "name": "Mohammed Omar",
+      "email": "mohammed.omar@company.com",
+      "phone": "01234567890",
+      "address": "789 Business District, Giza, Egypt",
+      "type": "part-time",
+      "associateGroup": "marketing",
+      "status": true,
+      "id": 3
+    },
+    {
+      "name": "Aisha Mahmoud",
+      "email": "aisha.mahmoud@company.com",
+      "phone": "01512345678",
+      "address": "321 Innovation Street, Cairo, Egypt",
+      "type": "contract",
+      "associateGroup": "development",
+      "status": true,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Omar Khalil",
+      "email": "omar.khalil@company.com",
+      "phone": "01098765432",
+      "type": "full-time",
+      "address": "654 Tech Park, Alexandria, Egypt",
+      "associateGroup": "sales",
+      "status": true
+    },
+    {
+      "id": 6,
+      "name": "Nour El-Din",
+      "email": "nour.eldin@company.com",
+      "phone": "01187654321",
+      "type": "intern",
+      "address": "987 Student Area, Cairo, Egypt",
+      "associateGroup": "development",
+      "status": true
+    },
+    {
+      "id": 7,
+      "name": "Layla Ahmed",
+      "email": "layla.ahmed@company.com",
+      "phone": "01276543210",
+      "type": "full-time",
+      "address": "147 Creative Zone, Giza, Egypt",
+      "associateGroup": "design",
+      "status": false
+    },
+    {
+      "id": 8,
+      "name": "Karim Hassan",
+      "email": "karim.hassan@company.com",
+      "phone": "01565432109",
+      "type": "part-time",
+      "address": "258 Marketing Hub, Alexandria, Egypt",
+      "associateGroup": "marketing",
+      "status": true
+    },
+    {
+      "id": 9,
+      "name": "Yasmine Mostafa",
+      "email": "yasmine.mostafa@company.com",
+      "phone": "01054321098",
+      "type": "contract",
+      "address": "369 HR Center, Cairo, Egypt",
+      "associateGroup": "hr",
+      "status": true
+    },
+    {
+      "id": 10,
+      "name": "Tarek Ibrahim",
+      "email": "tarek.ibrahim@company.com",
+      "phone": "01143210987",
+      "type": "full-time",
+      "address": "741 Sales District, Giza, Egypt",
+      "associateGroup": "sales",
+      "status": true
+    },
+    {
+      "name": "‪Youssef Raafat 02‬‏",
+      "email": "se.youssefrafat@gmail.com",
+      "phone": "01278004938",
+      "address": "90 st fargaly mohamed hassanen",
+      "type": "part-time",
+      "associateGroup": "development",
+      "status": false,
+      "id": 11
+    }
+  ]
+}
