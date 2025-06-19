@@ -110,5 +110,73 @@
       "status": false,
       "id": 11
     }
+  ],
+  "Users": [
+    {
+      "name": "Kitra Robles",
+      "password": "Pa$$w0rd!",
+      "email": "wedypyry@mailinator.com",
+      "phone": "01278000000",
+      "role": "user",
+      "gender": "male",
+      "status": true,
+      "confirmPassword": "Pa$$w0rd!",
+      "id": 1
+    },
+    {
+      "name": "‪Youssef Raafat‬‏",
+      "password": "123YYyy@@",
+      "email": "youssefrafat70@gmail.com",
+      "phone": "01278004938",
+      "role": "user",
+      "gender": "male",
+      "status": true,
+      "confirmPassword": "123YYyy@@",
+      "id": 2
+    },
+    {
+      "name": "‪Youssef Raafat‬‏",
+      "password": "123YYyy@@",
+      "email": "youssefrafat70@gmail.com",
+      "phone": "01278004938",
+      "role": "user",
+      "gender": "male",
+      "status": true,
+      "confirmPassword": "123YYyy@@",
+      "id": 3
+    },
+    {
+      "name": "‪Youssef Raafat‬‏",
+      "password": "123YYyy@@",
+      "email": "youssefrafat70@gmail.com",
+      "phone": "01278004938",
+      "role": "user",
+      "gender": "male",
+      "status": false,
+      "confirmPassword": "123YYyy@@",
+      "id": 4
+    },
+    {
+      "name": "‪Youssef Raafat‬‏",
+      "password": "123YYyy@@",
+      "email": "youssefrafat70@gmail.com",
+      "phone": "01278004938",
+      "role": "user",
+      "gender": "male",
+      "status": true,
+      "confirmPassword": "123YYyy@@",
+      "id": 5
+    },
+    {
+      "name": "‪Youssef Raafat‬‏",
+      "password": "102030",
+      "email": "youssef4@gmail.com",
+      "phone": "01278004938",
+      "role": "admin",
+      "gender": "male",
+      "status": true,
+      "confirmPassword": "102030",
+      "id": 6
+    }
   ]
 }

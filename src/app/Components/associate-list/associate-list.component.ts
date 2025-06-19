@@ -10,10 +10,11 @@ import { DropdownModule } from 'primeng/dropdown';
 import { TagModule } from 'primeng/tag';
 import { TooltipModule } from 'primeng/tooltip';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { MessageModule } from 'primeng/message';
 import { ConfirmationService } from 'primeng/api';
 import { AddAssociateComponent } from '../add-associate/add-associate.component';
 import { IAssociate } from '../../Store/Models/IAssociate';
-import { getAssociateList } from '../../Store/selectors/associate.selectors';
+import { getAssociateList, getErrorMsg } from '../../Store/selectors/associate.selectors';
 import { loadAssociate, deleteAssociate } from '../../Store/actions/associate.actions';
 import { showAlert } from '../../Store/actions/App.actions';
 
@@ -29,7 +30,8 @@ import { showAlert } from '../../Store/actions/App.actions';
     DropdownModule,
     TagModule,
     TooltipModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    MessageModule
   ],
   providers: [ConfirmationService],
   templateUrl: './associate-list.component.html',
@@ -54,13 +56,16 @@ export class AssociateListComponent implements OnInit {
     { label: 'Inactive', value: false }
   ];
   selectedStatus: boolean | null = null;
-
+  errorMsg = '';
   showDialog() {
     this.addAssociateComponent.showDialog();
   }
 
   ngOnInit(): void {
     this.store.dispatch(loadAssociate());
+    this.store.select(getErrorMsg).subscribe(res => {
+      this.errorMsg = res
+    })
     this.associateList$.subscribe(associates => {
       this.currentAssociates = associates;
       this.applyFilters();
@@ -126,12 +131,10 @@ export class AssociateListComponent implements OnInit {
   }
 
   editAssociate(associate: IAssociate) {
-    console.log('Editing associate:', associate);
     this.addAssociateComponent.showEditDialog(associate);
   }
 
   deleteAssociate(associate: IAssociate) {
-    console.log('Deleting associate:', associate);
     this.confirmationService.confirm({
       message: `Are you sure you want to delete ${associate.name}?`,
       header: 'Delete Confirmation',

@@ -31,8 +31,11 @@ export class AssociateEffects {
         exhaustMap((action) =>
           this._associateService.getAssociates().pipe(
             map((data) => loadAssociateSuccess({ list: data })),
-            catchError((error) =>
-              of(loadAssociateFail({ errorMsg: error.message }))
+            catchError((error) => {
+              // console.error('💥 Full error object:', error);
+              // return of(loadAssociateFail({ errorMsg: error.message || 'Unknown error' }));
+              return of(loadAssociateFail({ errorMsg: error.message }))
+              }
             )
           )
         )
@@ -46,14 +49,11 @@ export class AssociateEffects {
       return this.actions$.pipe(
         ofType(addAssociate),
         exhaustMap((action) => {
-          console.log('AddAssociate effect triggered with:', action.inputData);
           return this._associateService.addAssociate(action.inputData).pipe(
             map((data) => {
-              console.log('Associate added successfully:', data);
               return addAssociateSuccess({ inputData: data });
             }),
             catchError((error) => {
-              console.error('Error adding associate:', error);
               return of(addAssociateFail({ errorMsg: error.message }));
             })
           );
@@ -68,14 +68,11 @@ export class AssociateEffects {
       return this.actions$.pipe(
         ofType(editAssociate),
         exhaustMap((action) => {
-          console.log('EditAssociate effect triggered with:', action.inputData, 'ID:', action.id);
           return this._associateService.editAssociate(action.inputData, action.id).pipe(
             map((data) => {
-              console.log('Associate edited successfully:', data);
               return editAssociateSuccess({ inputData: data, id: data.id });
             }),
             catchError((error) => {
-              console.error('Error editing associate:', error);
               return of(editAssociateFail({ errorMsg: error.message }));
             })
           );
@@ -90,14 +87,11 @@ export class AssociateEffects {
       return this.actions$.pipe(
         ofType(deleteAssociate),
         exhaustMap((action) => {
-          console.log('DeleteAssociate effect triggered for ID:', action.id);
           return this._associateService.deleteAssociate(action.id).pipe(
             map(() => {
-              console.log('Associate deleted successfully, ID:', action.id);
               return deleteAssociateSuccess({ inputData: {} as IAssociate, id: action.id });
             }),
             catchError((error) => {
-              console.error('Error deleting associate:', error);
               return of(deleteAssociateFail({ errorMsg: error.message }));
             })
           );

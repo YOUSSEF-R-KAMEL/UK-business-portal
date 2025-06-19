@@ -9,10 +9,26 @@
       pInputText
       [placeholder]="placeholder"
       class="w-full "
-      [class.ng-invalid]="isInvalid"
+      [class.ng-invalid]="isInvalid && (touched || dirty)"
+      [class.p-invalid]="isInvalid && (touched || dirty)"
       [class.ng-valid]="isValid"
       [(ngModel)]="value"
       (blur)="onBlur()" />
+  }
+
+  @if (type === 'password') {
+    <p-password
+      [id]="id"
+      [toggleMask]="true"
+      [feedback]="false"
+      [placeholder]="placeholder"
+      class="w-full"
+      [class.ng-invalid]="isInvalid && (touched || dirty)"
+      [class.p-invalid]="isInvalid && (touched || dirty)"
+      [class.ng-valid]="isValid"
+      [(ngModel)]="value"
+      (onBlur)="onBlur()"
+    ></p-password>
   }
 
   <!-- Textarea -->
@@ -23,7 +39,8 @@
       [placeholder]="placeholder"
       [rows]="rows || 3"
       class="w-full "
-      [class.ng-invalid]="isInvalid"
+      [class.ng-invalid]="isInvalid && (touched || dirty)"
+      [class.p-invalid]="isInvalid && (touched || dirty)"
       [class.ng-valid]="isValid"
       [(ngModel)]="value"
       (blur)="onBlur()"></textarea>
@@ -38,7 +55,8 @@
       optionLabel="label"
       optionValue="value"
       class="w-full "
-      [class.ng-invalid]="isInvalid"
+      [class.ng-invalid]="isInvalid && (touched || dirty)"
+      [class.p-invalid]="isInvalid && (touched || dirty)"
       [class.ng-valid]="isValid"
       [ngModel]="value"
       (ngModelChange)="onValueChange($event)"
@@ -69,6 +87,9 @@
       }
       @if (errors?.['minlength']) {
         <span class="text-red-400">{{ label }} must be at least {{ errors?.['minlength']?.requiredLength }} characters</span>
+      }
+      @if (errors?.['passwordMismatch']) {
+        <span class="text-red-400">Passwords do not match</span>
       }
     </small>
   }

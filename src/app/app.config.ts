@@ -14,6 +14,8 @@ import { provideHttpClient } from '@angular/common/http';
 import { associateReducer } from './Store/reducers/associate.reducer';
 import { AssociateEffects } from './Store/effects/associate.effects';
 import { AppEffects } from './Store/effects/App.effects';
+import { UserReducer } from './Store/reducers/user.reducer';
+import { UserEffects } from './Store/effects/user.effect';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -49,9 +51,10 @@ export const appConfig: ApplicationConfig = {
       }
     }),
     provideStore({
-      associate: associateReducer
+      associate: associateReducer,
+      user: UserReducer
     }),
-    provideEffects([AssociateEffects, AppEffects]),
+    provideEffects([AssociateEffects, AppEffects, UserEffects]),
     provideRouterStore(),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })
   ]

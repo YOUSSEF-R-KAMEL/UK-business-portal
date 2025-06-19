@@ -36,7 +36,13 @@
   </div>
 
   <!-- Table -->
-  <p-table
+  @if (errorMsg) {
+    <div class="col-12">
+      <p-message severity="error" text="{{ errorMsg }}"></p-message>
+    </div>
+  }
+  @else {
+    <p-table
     [value]="filteredAssociates"
     [paginator]="true"
     [rows]="rows"
@@ -153,6 +159,9 @@
       </tr>
     </ng-template>
   </p-table>
+  }
+
+
 
   <!-- Add Associate Dialog -->
   <app-add-associate></app-add-associate>

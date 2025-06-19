@@ -1,29 +1,47 @@
-import { Component, Input, forwardRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { Component, Input, forwardRef, Output, EventEmitter } from '@angular/core';
+import {
+  ControlValueAccessor,
+  NG_VALUE_ACCESSOR,
+  ReactiveFormsModule,
+  FormsModule,
+} from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextarea } from 'primeng/inputtextarea';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputSwitch } from 'primeng/inputswitch';
+import { PasswordModule } from 'primeng/password';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-form-input',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, InputTextModule, InputTextarea, DropdownModule, InputSwitch],
+  imports: [
+    CommonModule,
+    FormsModule,
+    InputTextModule,
+    InputTextarea,
+    ReactiveFormsModule,
+    DropdownModule,
+    InputSwitch,
+    PasswordModule,
+  ],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => FormInputComponent),
-      multi: true
-    }
+      multi: true,
+    },
   ],
   templateUrl: './form-input.component.html',
-  styleUrls: ['./form-input.component.scss']
+  styleUrls: ['./form-input.component.scss'],
 })
 export class FormInputComponent implements ControlValueAccessor {
   @Input() id!: string;
   @Input() label!: string;
-  @Input() type: 'text' | 'email' | 'tel' | 'textarea' | 'dropdown' | 'switch' = 'text';
+  @Input() type: 'text' | 'email' | 'tel' | 'textarea' | 'dropdown' | 'switch' | 'password' =
+    'text';
   @Input() placeholder: string = '';
+  @Input() formControlName: string = '';
   @Input() required: boolean = false;
   @Input() rows: number = 3;
   @Input() options: any[] = [];
@@ -31,6 +49,7 @@ export class FormInputComponent implements ControlValueAccessor {
   @Input() errors: any = null;
   @Input() touched: boolean = false;
   @Input() dirty: boolean = false;
+  @Output() blur = new EventEmitter<void>();
 
   private _value: any = '';
   private _isWritingValue = false;
@@ -67,6 +86,7 @@ export class FormInputComponent implements ControlValueAccessor {
 
   onBlur(): void {
     this.onTouched();
+    this.blur.emit();
   }
 
   // ControlValueAccessor methods

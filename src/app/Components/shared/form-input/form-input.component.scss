@@ -1,18 +1,69 @@
 .form-field {
-  padding-bottom: 1rem;
   position: relative;
+  margin-bottom: .7rem;
 }
 
-// Fix dropdown positioning
-::ng-deep .p-dropdown-panel {
-  z-index: 1000 !important;
+.p-error {
+  display: block;
+  margin-top: 0.25rem;
 }
 
-::ng-deep .p-dropdown {
-  width: 100% !important;
-}
+::ng-deep {
+  label {
+    margin-bottom: .7rem;
+    display: block;
+  }
 
-// Ensure dialog content doesn't interfere with dropdowns
-::ng-deep .p-dialog-content {
-  overflow: visible !important;
+  // PrimeNG component styles
+  .p-dropdown-panel {
+    z-index: 1000 !important;
+  }
+
+  .p-dropdown {
+    width: 100% !important;
+  }
+
+  .p-dialog-content {
+    overflow: visible !important;
+  }
+
+  p-inputswitch {
+    vertical-align: middle;
+  }
+
+  .p-password {
+    width: 100% !important;
+    input {
+      width: 100% !important;
+    }
+  }
+
+  .p-toggleswitch-slider {
+    position: relative;
+  }
+
+  // Invalid state styles
+  .p-invalid.p-component {
+    border-color: #ef4444 !important; /* Tailwind's red-500 */
+  }
+
+  .p-inputtext.p-invalid {
+    border-color: var(--red-500) !important;
+  }
+
+  .p-dropdown.p-invalid {
+    .p-dropdown-label {
+      border-color: var(--red-500) !important;
+    }
+  }
+
+  textarea.p-inputtextarea.p-invalid {
+    border-color: var(--red-500) !important;
+  }
+
+  p-password.p-invalid {
+    .p-inputtext {
+      border-color: #ef4444 !important;
+    }
+  }
 }

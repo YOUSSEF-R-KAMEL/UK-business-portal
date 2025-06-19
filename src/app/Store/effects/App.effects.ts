@@ -14,22 +14,17 @@ export class AppEffects {
     return this.actions$.pipe(
       ofType(showAlert),
       tap(action => {
-        console.log('ShowAlert effect triggered with:', action);
         switch (action.resultType) {
           case 'success':
-            console.log('Showing success toast');
             this._toastService.showSuccess(action.message);
             break;
           case 'error':
-            console.log('Showing error toast');
             this._toastService.showError(action.message);
             break;
           case 'info':
-            console.log('Showing info toast');
             this._toastService.showInfo(action.message);
             break;
           case 'warning':
-            console.log('Showing warning toast');
             this._toastService.showWarning(action.message);
             break;
         }

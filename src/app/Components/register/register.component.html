@@ -1,0 +1,125 @@
+<div class="register-container">
+  <p-card>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="card-header">
+        <h2 class="text-blue-400 mb-5">Register</h2>
+      </div>
+      <div class="card-body">
+          <div class="p-fluid grid">
+            <div class="col-12 md:col-6">
+              <app-form-input
+                id="name"
+                label="Name"
+                type="text"
+                placeholder="Enter full name"
+                [required]="true"
+                formControlName="name"
+                [errors]="name?.errors"
+                [touched]="name?.touched ?? false"
+                [dirty]="name?.dirty ?? false">
+              </app-form-input>
+            </div>
+
+            <div class="col-12 md:col-6">
+              <app-form-input
+                id="email"
+                label="Email"
+                (blur)="duplicatedUser()"
+                type="email"
+                placeholder="Enter email address"
+                [required]="true"
+                formControlName="email"
+                [errors]="email?.errors"
+                [touched]="email?.touched ?? false"
+                [dirty]="email?.dirty ?? false">
+              </app-form-input>
+            </div>
+
+            <div class="col-12 md:col-6">
+              <app-form-input
+                id="password"
+                label="Password"
+                type="password"
+                placeholder="Enter password"
+                [required]="true"
+                formControlName="password"
+                [errors]="password?.errors"
+                [touched]="password?.touched ?? false"
+                [dirty]="password?.dirty ?? false">
+              </app-form-input>
+            </div>
+
+            <div class="col-12 md:col-6">
+              <app-form-input
+                id="confirmPassword"
+                label="Confirm Password"
+                type="password"
+                placeholder="Confirm password"
+                [required]="true"
+                formControlName="confirmPassword"
+                [errors]="confirmPassword?.errors"
+                [touched]="confirmPassword?.touched ?? false"
+                [dirty]="confirmPassword?.dirty ?? false">
+              </app-form-input>
+            </div>
+
+            <div class="col-12 md:col-6">
+              <app-form-input
+                id="phone"
+                label="Phone"
+                type="tel"
+                placeholder="Enter phone number"
+                [required]="true"
+                formControlName="phone"
+                [errors]="phone?.errors"
+                [touched]="phone?.touched ?? false"
+                [dirty]="phone?.dirty ?? false"
+                patternError="Please enter a valid Egyptian phone number">
+              </app-form-input>
+            </div>
+
+            <div class="col-12 md:col-6">
+              <app-form-input
+                id="role"
+                label="Role"
+                type="dropdown"
+                placeholder="Select user role"
+                [options]="roles"
+                formControlName="role">
+              </app-form-input>
+            </div>
+
+            <div class="col-12 md:col-6">
+              <app-form-input
+                id="gender"
+                label="Gender"
+                type="dropdown"
+                placeholder="Select gender"
+                [options]="genders"
+                formControlName="gender">
+              </app-form-input>
+            </div>
+
+            <div class="col-12 md:col-6">
+              <div class="form-field">
+                <label for="status" class="font-bold mr-3">Status</label>
+                <div class="flex justify-content-start align-items-center h-full mt-3">
+                  <p-inputSwitch id="status" formControlName="status" />
+                  <span class="ml-2">{{ registerForm.get('status')?.value ? 'Active' : 'Inactive' }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="card-footer flex justify-content-between align-items-center">
+        <a routerLink="/login" class="text-blue-400 hover:text-blue-500 transition-duration-200">Already have account ?</a>
+        <p-button
+          label="Register"
+          type="submit"
+          icon="pi pi-user-plus"
+          severity="primary"
+          [disabled]="registerForm.invalid" />
+      </div>
+    </form>
+  </p-card>
+</div>

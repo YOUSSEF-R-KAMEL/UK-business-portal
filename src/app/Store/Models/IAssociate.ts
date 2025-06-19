@@ -1,3 +1,5 @@
+import { EntityState } from "@ngrx/entity"
+
 export interface IAssociate {
   id: number,
   name: string,
@@ -13,4 +15,9 @@ export interface IAssociateState {
   list:IAssociate[],
   associateObj: IAssociate,
   errorMsg:string
+}
+
+export interface IAssociateModel extends EntityState<IAssociate> {
+  errorMsg:string,
+  isLoading: boolean
 }
