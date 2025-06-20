@@ -3,7 +3,7 @@ import { Actions, ofType, createEffect } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { catchError, exhaustMap, map, tap } from 'rxjs/operators';
 import { showAlert } from '../actions/App.actions';
-import { ToastService } from '../../Services/toast.service';
+import { ToastService } from '../../feature/Services/toast.service';
 
 @Injectable()
 export class AppEffects {

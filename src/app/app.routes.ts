@@ -1,12 +1,15 @@
 import { Routes } from '@angular/router';
-import { AssociateListComponent } from './Components/associate-list/associate-list.component';
-import { HomeComponent } from './Components/home/home.component';
-import { LoginComponent } from './Components/login/login.component';
-import { RegisterComponent } from './Components/register/register.component';
+import { authGuard } from './Core/guard/auth.guard';
+import { HomeComponent } from './feature/home/home.component';
+import { AssociateListComponent } from './feature/associate-list/associate-list.component';
+import { LoginComponent } from './feature/auth/login/login.component';
+import { RegisterComponent } from './feature/auth/register/register.component';
+import { UsersComponent } from './feature/users/users.component';
 
 export const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'associate', component: AssociateListComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent}
+  { path: '', component: HomeComponent, canActivate: [authGuard] },
+  { path: 'users', component: UsersComponent, canActivate: [authGuard] },
+  { path: 'associates', component: AssociateListComponent, canActivate: [authGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
 ];

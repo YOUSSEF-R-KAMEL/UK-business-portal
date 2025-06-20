@@ -1,0 +1,50 @@
+<div class="hero-section">
+  <div class="p-card hero-card">
+    <h1 class="hero-title">Welcome to Our Company System</h1>
+    <p class="hero-description">Manage your associates and streamline your operations with ease.</p>
+    <div class="hero-actions">
+      <p-button label="View Associates" routerLink="/associates" severity="primary" class="mr-3" />
+      <p-button label="Users" routerLink="/users" severity="secondary" />
+    </div>
+  </div>
+</div>
+
+<div class="features-section">
+  <div class="grid">
+    <div class="col-12 md:col-4">
+      <p-card class="feature-card">
+        <ng-template pTemplate="header">
+            <i class="pi pi-users text-2xl mr-2"></i>
+            <span class="text-2xl">Manage Staff</span>
+        </ng-template>
+        <p>
+          Efficiently add, edit, and delete associate records. Keep track of all your team members in one place.
+        </p>
+      </p-card>
+    </div>
+
+    <div class="col-12 md:col-4">
+      <p-card class="feature-card">
+        <ng-template pTemplate="header">
+            <i class="pi pi-lock text-2xl mr-2"></i>
+            <span class="text-2xl">Secure Access</span>
+        </ng-template>
+        <p>
+          Robust authentication and authorization ensure only authorized personnel can access sensitive data.
+        </p>
+      </p-card>
+    </div>
+
+    <div class="col-12 md:col-4">
+      <p-card class="feature-card">
+        <ng-template pTemplate="header">
+            <i class="pi pi-desktop text-2xl mr-2"></i>
+            <span class="text-2xl">Intuitive Interface</span>
+        </ng-template>
+        <p>
+          A user-friendly design powered by PrimeNG components makes navigating the system a breeze.
+        </p>
+      </p-card>
+    </div>
+  </div>
+</div>

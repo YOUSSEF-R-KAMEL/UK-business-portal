@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { IAssociate } from '../Store/Models/IAssociate';
-import { Observable } from 'rxjs';
-import { IUser, IUserCred, IUserInfo } from '../Store/Models/IUser';
+import { IAssociate } from '../../Store/Models/IAssociate';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { IUser, IUserCred, IUserInfo } from '../../Store/Models/IUser';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,8 @@ export class UserService {
 
   private _httpClient = inject(HttpClient);
   private baseUrl = 'http://localhost:3000/users';
+  private userSubject = new BehaviorSubject<IUserInfo | null>(this.getUserData());
+  user$ = this.userSubject.asObservable();
 
   // getAssociates(): Observable<IAssociate[]> {
   //   return this._httpClient.get<IAssociate[]>(this.baseUrl);
@@ -28,6 +30,20 @@ export class UserService {
     return this._httpClient.get<IUser[] | []>(`${this.baseUrl}?email=${data}`);
   }
 
+  saveInfo(data:IUserInfo){
+    localStorage.setItem('user', JSON.stringify(data))
+    this.userSubject.next(data);
+  }
 
+
+  getUserData(): IUserInfo | null {
+    const user = localStorage.getItem('user');
+    return user ? JSON.parse(user) as IUserInfo : null;
+  }
+
+  logout() {
+    localStorage.removeItem('user');
+    this.userSubject.next(null);
+  }
 
 }

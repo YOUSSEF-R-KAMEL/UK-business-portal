@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { IAssociate } from '../Store/Models/IAssociate';
+import { IAssociate } from '../../Store/Models/IAssociate';
 import { Observable } from 'rxjs';
 
 @Injectable({

@@ -2,7 +2,7 @@ import { inject, Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { catchError, exhaustMap, map, of, from } from "rxjs";
 import { mergeMap } from "rxjs/operators";
-import { UserService } from "../../Services/user.service";
+import { UserService } from "../../feature/Services/user.service";
 import { showAlert } from "../actions/App.actions";
 import { Router } from "@angular/router";
 import { beginLogin, beginRegister, duplicateUser, duplicateUserSuccess } from "../actions/user.action";
@@ -43,6 +43,7 @@ export class UserEffects {
               if(data.length > 0){
                 const userData = data[0]
                 if(userData.status){
+                  this._userService.saveInfo(userData)
                   this._router.navigate(['']);
                   return showAlert({ message: "Login successfully", resultType: "success" });
                 }

@@ -2,7 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { Actions, ofType, createEffect } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { catchError, exhaustMap, map } from 'rxjs/operators';
-import { AssociateService } from '../../Services/associate.service';
+import { AssociateService } from '../../feature/Services/associate.service';
 import { IAssociate } from '../Models/IAssociate';
 import {
   loadAssociate,

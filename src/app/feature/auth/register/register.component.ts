@@ -7,12 +7,12 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { PasswordModule } from 'primeng/password';
 import { CardModule } from 'primeng/card';
-import { FormInputComponent } from '../shared/form-input/form-input.component';
-import { IUser } from '../../Store/Models/IUser';
 import { Store } from '@ngrx/store';
-import { beginRegister, duplicateUser } from '../../Store/actions/user.action';
 import { RouterLink } from '@angular/router';
-import { isDuplicateUser } from '../../Store/selectors/user.selectors';
+import { FormInputComponent } from '../../../shared/form-input/form-input.component';
+import { IUser } from '../../../Store/Models/IUser';
+import { beginRegister, duplicateUser } from '../../../Store/actions/user.action';
+import { isDuplicateUser } from '../../../Store/selectors/user.selectors';
 
 @Component({
   selector: 'app-register',
