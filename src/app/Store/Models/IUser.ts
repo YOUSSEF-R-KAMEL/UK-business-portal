@@ -5,9 +5,7 @@ export interface IUser {
   name: string,
   email: string,
   phone: string,
-  role: string,
   gender: string,
-  status: boolean
 }
 
 export interface IUserCred {
@@ -18,8 +16,6 @@ export interface IUserCred {
 export interface IUserInfo {
   name: string,
   email: string,
-  role: string,
-  status: boolean
 }
 
 export interface IUserModel extends EntityState<IUser> {

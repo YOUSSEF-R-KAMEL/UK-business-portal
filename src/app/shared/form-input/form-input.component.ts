@@ -11,6 +11,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputSwitch } from 'primeng/inputswitch';
 import { PasswordModule } from 'primeng/password';
 import { CommonModule } from '@angular/common';
+import { CalendarModule } from 'primeng/calendar';
 
 @Component({
   selector: 'app-form-input',
@@ -24,6 +25,7 @@ import { CommonModule } from '@angular/common';
     DropdownModule,
     InputSwitch,
     PasswordModule,
+    CalendarModule
   ],
   providers: [
     {
@@ -38,7 +40,7 @@ import { CommonModule } from '@angular/common';
 export class FormInputComponent implements ControlValueAccessor {
   @Input() id!: string;
   @Input() label!: string;
-  @Input() type: 'text' | 'email' | 'tel' | 'textarea' | 'dropdown' | 'switch' | 'password' =
+  @Input() type: 'text' | 'email' | 'tel' | 'textarea' | 'dropdown' | 'switch' | 'password' | 'date' =
     'text';
   @Input() placeholder: string = '';
   @Input() formControlName: string = '';

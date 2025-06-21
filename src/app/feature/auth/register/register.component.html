@@ -80,17 +80,6 @@
 
             <div class="col-12 md:col-6">
               <app-form-input
-                id="role"
-                label="Role"
-                type="dropdown"
-                placeholder="Select user role"
-                [options]="roles"
-                formControlName="role">
-              </app-form-input>
-            </div>
-
-            <div class="col-12 md:col-6">
-              <app-form-input
                 id="gender"
                 label="Gender"
                 type="dropdown"
@@ -98,16 +87,6 @@
                 [options]="genders"
                 formControlName="gender">
               </app-form-input>
-            </div>
-
-            <div class="col-12 md:col-6">
-              <div class="form-field">
-                <label for="status" class="font-bold mr-3">Status</label>
-                <div class="flex justify-content-start align-items-center h-full mt-3">
-                  <p-inputSwitch id="status" formControlName="status" />
-                  <span class="ml-2">{{ registerForm.get('status')?.value ? 'Active' : 'Inactive' }}</span>
-                </div>
-              </div>
             </div>
           </div>
       </div>

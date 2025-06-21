@@ -16,6 +16,8 @@ import { AssociateEffects } from './Store/effects/associate.effects';
 import { AppEffects } from './Store/effects/App.effects';
 import { UserReducer } from './Store/reducers/user.reducer';
 import { UserEffects } from './Store/effects/user.effect';
+import { ArticleReducer } from './Store/reducers/article.reducer';
+import { ArticleEffects } from './Store/effects/article.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -52,9 +54,10 @@ export const appConfig: ApplicationConfig = {
     }),
     provideStore({
       associate: associateReducer,
-      user: UserReducer
+      user: UserReducer,
+      article: ArticleReducer
     }),
-    provideEffects([AssociateEffects, AppEffects, UserEffects]),
+    provideEffects([AssociateEffects, AppEffects, UserEffects, ArticleEffects]),
     provideRouterStore(),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })
   ]

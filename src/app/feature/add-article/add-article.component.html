@@ -1,0 +1,150 @@
+<form [formGroup]="articleForm" (ngSubmit)="onSubmit()" class="p-fluid p-formgrid grid gap-4">
+  <h2 class="col-12 text-xl font-bold mb-4">Add Article</h2>
+
+  <!-- Source ID -->
+  <div class="col-12 md:col-6" [formGroup]="source">
+    <app-form-input
+      id="sourceId"
+      label="Source ID"
+      type="text"
+      placeholder="Enter source ID"
+      [required]="true"
+      formControlName="id"
+      [errors]="source.get('id')?.errors"
+      [touched]="source.get('id')?.touched ?? false"
+      [dirty]="source.get('id')?.dirty ?? false">
+    </app-form-input>
+  </div>
+
+  <!-- Source Name -->
+  <div class="col-12 md:col-6" [formGroup]="source">
+    <app-form-input
+      id="sourceName"
+      label="Source Name"
+      type="text"
+      placeholder="Enter source name"
+      [required]="true"
+      formControlName="name"
+      [errors]="source.get('name')?.errors"
+      [touched]="source.get('name')?.touched ?? false"
+      [dirty]="source.get('name')?.dirty ?? false">
+    </app-form-input>
+  </div>
+
+  <!-- Author -->
+  <div class="col-12 md:col-6">
+    <app-form-input
+      id="author"
+      label="Author"
+      type="text"
+      placeholder="Enter author name"
+      [required]="true"
+      formControlName="author"
+      [errors]="author.errors"
+      [touched]="author.touched"
+      [dirty]="author.dirty">
+    </app-form-input>
+  </div>
+
+  <!-- Title -->
+  <div class="col-12 md:col-6">
+    <app-form-input
+      id="title"
+      label="Title"
+      type="text"
+      placeholder="Enter article title"
+      [required]="true"
+      formControlName="title"
+      [errors]="title.errors"
+      [touched]="title.touched"
+      [dirty]="title.dirty">
+    </app-form-input>
+  </div>
+
+  <!-- Description -->
+  <div class="col-12">
+    <app-form-input
+      id="description"
+      label="Description"
+      type="textarea"
+      placeholder="Enter description"
+      [rows]="3"
+      [required]="true"
+      formControlName="description"
+      [errors]="description.errors"
+      [touched]="description.touched"
+      [dirty]="description.dirty">
+    </app-form-input>
+  </div>
+
+  <!-- URL -->
+  <div class="col-12 md:col-6">
+    <app-form-input
+      id="url"
+      label="Article URL"
+      type="text"
+      placeholder="https://example.com"
+      [required]="true"
+      formControlName="url"
+      [errors]="url.errors"
+      [touched]="url.touched"
+      [dirty]="url.dirty">
+    </app-form-input>
+  </div>
+
+  <!-- URL to Image -->
+  <div class="col-12 md:col-6">
+    <app-form-input
+      id="urlToImage"
+      label="Image URL"
+      type="text"
+      placeholder="https://image.com"
+      [required]="true"
+      formControlName="urlToImage"
+      [errors]="urlToImage.errors"
+      [touched]="urlToImage.touched"
+      [dirty]="urlToImage.dirty">
+    </app-form-input>
+  </div>
+
+  <!-- Published At -->
+  <div class="col-12 md:col-6">
+    <app-form-input
+      id="publishedAt"
+      label="Published At"
+      type="date"
+      placeholder="Enter publish date"
+      [required]="true"
+      formControlName="publishedAt"
+      [errors]="publishedAt.errors"
+      [touched]="publishedAt.touched"
+      [dirty]="publishedAt.dirty">
+    </app-form-input>
+  </div>
+
+  <!-- Content -->
+  <div class="col-12">
+    <app-form-input
+      id="content"
+      label="Content"
+      type="textarea"
+      placeholder="Enter content"
+      [rows]="5"
+      [required]="true"
+      formControlName="content"
+      [errors]="content.errors"
+      [touched]="content.touched"
+      [dirty]="content.dirty">
+    </app-form-input>
+  </div>
+
+  <!-- Submit -->
+  <div class="col-12 text-right">
+    <p-button
+      label="Add"
+      type="submit"
+      icon="pi pi-save"
+      [disabled]="articleForm.invalid">
+    </p-button>
+  </div>
+</form>

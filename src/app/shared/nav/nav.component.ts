@@ -27,6 +27,7 @@ export class NavComponent implements OnInit {
     this.items = [
       { label: 'Home', icon: 'pi pi-home', routerLink: '/' },
       { label: 'users', icon: 'pi pi-users', routerLink: '/users' },
+      { label: 'Articles', icon: 'pi pi-users', routerLink: '/articles' },
       { label: 'Associates', icon: 'pi pi-users', routerLink: '/associates' },
     ];
 

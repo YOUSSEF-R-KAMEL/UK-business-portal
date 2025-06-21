@@ -31,6 +31,21 @@
     ></p-password>
   }
 
+  @if (type === 'date') {
+    <p-calendar
+      [inputId]="id"
+      dateFormat="yy-mm-dd"
+      class="w-full"
+      [showIcon]="true"
+      [placeholder]="placeholder"
+      [class.ng-invalid]="isInvalid && (touched || dirty)"
+      [class.p-invalid]="isInvalid && (touched || dirty)"
+      [class.ng-valid]="isValid"
+      [(ngModel)]="value"
+      (onBlur)="onBlur()">
+    </p-calendar>
+  }
+
   <!-- Textarea -->
   @if (type === 'textarea') {
     <textarea

@@ -42,14 +42,14 @@ export class UserEffects {
             map((data) => {
               if(data.length > 0){
                 const userData = data[0]
-                if(userData.status){
+                // if(userData.status){
                   this._userService.saveInfo(userData)
                   this._router.navigate(['']);
                   return showAlert({ message: "Login successfully", resultType: "success" });
-                }
-                else {
-                  return showAlert({ message: "Inactive User", resultType: "error" });
-                }
+                // }
+                // else {
+                  // return showAlert({ message: "Inactive User", resultType: "error" });
+                // }
               }
               else {
                 return showAlert({ message: "Login failed: invalid credential", resultType: "error" });

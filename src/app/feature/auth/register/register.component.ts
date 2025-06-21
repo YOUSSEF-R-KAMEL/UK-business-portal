@@ -37,12 +37,6 @@ export class RegisterComponent {
   private fb = inject(FormBuilder);
   private cdr = inject(ChangeDetectorRef);
   private store = inject(Store);
-
-  roles = [
-    { label: 'Admin', value: 'admin' },
-    { label: 'User', value: 'user' }
-  ];
-
   genders = [
     { label: 'Male', value: 'male' },
     { label: 'Female', value: 'female' },
@@ -68,9 +62,7 @@ export class RegisterComponent {
     password: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
     phone: ['', [Validators.required, Validators.pattern(/^01[0-2,5]{1}[0-9]{8}$/)]],
-    role: ['user', Validators.required],
     gender: ['male', Validators.required],
-    status: [true],
     confirmPassword: ['', Validators.required]
   }, { validators: this.passwordMatchValidator });
 
@@ -93,10 +85,6 @@ export class RegisterComponent {
 
   get phone() {
     return this.registerForm.get('phone');
-  }
-
-  get role() {
-    return this.registerForm.get('role');
   }
 
   get gender() {
