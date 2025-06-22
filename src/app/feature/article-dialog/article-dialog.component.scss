@@ -1,6 +1,6 @@
 ::ng-deep {
   .p-dialog, .p-dialog-content {
-    overflow: visible !important;
+    overflow: scroll !important;
     max-height: 100% !important;
     .p-dropdown-panel {
       z-index: 1001 !important;

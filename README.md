@@ -1,6 +1,7 @@
-# Company System
+# UK-business-portal
 
-A modern Angular application with NGRX state management for managing company associates. Built with Angular 19, PrimeNG UI components, and JSON Server for the backend.
+A modern Angular application with NGRX state management for managing UK-business-portal;
+ associates. Built with Angular 19, PrimeNG UI components, and JSON Server for the backend.
 
 ## Features
 

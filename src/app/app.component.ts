@@ -11,5 +11,4 @@ import { NavComponent } from './shared/nav/nav.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'company-system';
 }

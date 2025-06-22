@@ -1,0 +1,52 @@
+<section class="homepage p-px-4 p-pt-4">
+  <!-- Hero Section -->
+  <div class="hero p-d-flex p-flex-column p-ai-center p-text-center fade-in">
+    <h1 class="p-mb-2">Welcome to the UK Business Portal</h1>
+    <p class="p-mb-3">Your gateway to growth, news, and professional networks in the UK.</p>
+    <a routerLink="/articles"  pButton label="Get Started" class="p-button-warning mt-4 p-px-4 p-py-2"></a>
+  </div>
+
+  <!-- Business Highlights -->
+  <div class="section fade-in">
+    <h2 class="section-title">📊 Business News Highlights</h2>
+    <ul class="p-pl-3 p-text-left list-none">
+      <li>Real-time updates from top UK financial sources</li>
+      <li>Curated insights from Financial Times, BBC, The Guardian & more</li>
+      <li>Easy filtering by media source or topic</li>
+    </ul>
+  </div>
+
+  <!-- Associate Groups -->
+  <div class="section fade-in">
+    <h2 class="section-title">👥 Associate Groups</h2>
+    <div class="p-d-flex p-flex-wrap p-gap-2">
+      <span class="group-tag mr-2 inline-block mb-3" *ngFor="let group of groups">{{ group }}</span>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="section fade-in">
+    <h2 class="section-title">🚀 Why Use This Portal?</h2>
+    <div class="grid mt-2 align-items-stretch">
+      <div class="col-12 sm:col-6 md:col-4">
+        <div class="feature-card">
+          <h3>Centralized News</h3>
+          <p>Follow economic and industry developments in one place.</p>
+        </div>
+      </div>
+      <div class="col-12 sm:col-6 md:col-4">
+        <div class="feature-card">
+          <h3>Team Management</h3>
+          <p>Keep track of associate details and groups easily.</p>
+        </div>
+      </div>
+      <div class="col-12 sm:col-6 md:col-4">
+        <div class="feature-card">
+          <h3>Real-Time Content</h3>
+          <p>Data updates dynamically to reflect latest activity.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

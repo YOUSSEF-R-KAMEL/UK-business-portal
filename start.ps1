@@ -1,4 +1,4 @@
-Write-Host "🚀 Starting Company System..." -ForegroundColor Cyan
+Write-Host "🚀 Starting UK-business-portal ..." -ForegroundColor Cyan
 Write-Host "📱 Angular App: http://localhost:4200" -ForegroundColor Green
 Write-Host "🔌 API Server: http://localhost:3000" -ForegroundColor Yellow
 Write-Host ""

@@ -67,3 +67,12 @@
     }
   }
 }
+
+::ng-deep {
+  .p-menubar-item-link-active,
+  .p-menubar-item-link:hover {
+    background-color: var(--p-primary-color);
+    border-radius: inherit;
+    transition: inherit;
+  }
+}

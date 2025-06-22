@@ -1,5 +1,5 @@
     <!-- Header with Add Button -->
-    <div class="flex justify-content-between align-items-center mb-4">
+    <div class="flex justify-content-between align-items-center mb-4 fade-in">
       <h2 class="text-2xl font-bold m-0">Articles</h2>
       <p-button
         (click)="showDialog()"
@@ -9,7 +9,7 @@
     </div>
 
     <!-- Filters -->
-    <div class="filter-section flex gap-3">
+    <div class="filter-section flex gap-3 fade-in">
       <div class="flex-1">
         <span class="p-input-icon-left w-full">
           <i class="pi pi-search"></i>
@@ -29,7 +29,7 @@
       @for (article of filteredArticles.slice(0, num); track $index) {
         <div class="col-12 md:col-6 lg:col-4 xl:col-3">
           <p-card
-          class="w-full flex flex-column justify-between h-full"
+          class="w-full flex flex-column justify-between h-full fade-in"
           [header]="article.title | wordSlice: 7"
           [subheader]="article.author">
 
@@ -78,12 +78,12 @@
       }
   </div>
 
-  <div class="text-center mt-4" *ngIf="filteredArticles.length > 8">
+  <div class="text-center my-3" *ngIf="filteredArticles.length > 8">
     <p-button
       [label]="showAll ? 'View less' : 'View all'"
       icon="pi pi-angle-down"
       (click)="toggleShowAll()"
-      class="p-button-sm">
+      class="p-button-sm ">
     </p-button>
   </div>
   <!-- Add Associate Dialog -->

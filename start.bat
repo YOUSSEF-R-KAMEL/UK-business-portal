@@ -1,5 +1,5 @@
 @echo off
-echo 🚀 Starting Company System...
+echo 🚀 Starting UK business portal...
 echo 📱 Angular App: http://localhost:4200
 echo 🔌 API Server: http://localhost:3000
 echo.

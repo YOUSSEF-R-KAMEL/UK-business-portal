@@ -1,7 +1,7 @@
 <div class="card pt-5">
 
   <!-- Filters -->
-  <div class="filter-section flex gap-3">
+  <div class="filter-section flex gap-3 fade-in">
     <div class="flex-1">
       <span class="p-input-icon-left w-full">
         <i class="pi pi-search"></i>
@@ -18,12 +18,13 @@
 
   <!-- Table -->
   @if (errorMsg) {
-    <div class="col-12">
+    <div class="col-12" fade-in>
       <p-message severity="error" text="{{ errorMsg }}"></p-message>
     </div>
   }
   @else {
     <p-table
+    class="fade-in"
     [value]="filteredUsers"
     [paginator]="true"
     [rows]="rows"

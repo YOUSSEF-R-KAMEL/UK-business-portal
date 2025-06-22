@@ -17,7 +17,7 @@ const commands = [
   }
 ];
 
-console.log('🚀 Starting Company System...');
+console.log('🚀 Starting UK-business-portal ...');
 console.log('📱 Angular App: http://localhost:4200');
 console.log('🔌 API Server: http://localhost:3000');
 console.log('');

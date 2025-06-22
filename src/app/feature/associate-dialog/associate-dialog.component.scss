@@ -1,10 +1,10 @@
 // Ensure proper dropdown positioning in dialog
 ::ng-deep .p-dialog {
-  overflow: visible !important;
+  overflow: scroll !important;
 }
 
 ::ng-deep .p-dialog-content {
-  overflow: visible !important;
+  overflow: scroll !important;
 }
 
 // Fix dropdown panel positioning

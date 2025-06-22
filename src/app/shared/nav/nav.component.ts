@@ -25,17 +25,17 @@ export class NavComponent implements OnInit {
 
   updateMenuItems() {
     this.items = [
-      { label: 'Home', icon: 'pi pi-home', routerLink: '/' },
-      { label: 'users', icon: 'pi pi-users', routerLink: '/users' },
-      { label: 'Articles', icon: 'pi pi-users', routerLink: '/articles' },
-      { label: 'Associates', icon: 'pi pi-users', routerLink: '/associates' },
+      { label: 'Home', icon: 'pi pi-home', routerLink: '/', routerLinkActiveOptions: { exact: true } },
+      { label: 'users', icon: 'pi pi-users', routerLink: '/users', routerLinkActiveOptions: { exact: true } },
+      { label: 'Articles', icon: 'pi pi-users', routerLink: '/articles', routerLinkActiveOptions: { exact: true } },
+      { label: 'Associates', icon: 'pi pi-users', routerLink: '/associates', routerLinkActiveOptions: { exact: true } },
     ];
 
     if (!this.isLogged) {
       this.items = []
       this.items.push(
-        { label: 'Login', icon: 'pi pi-sign-in', routerLink: '/login' },
-        { label: 'Register', icon: 'pi pi-user-plus', routerLink: '/register' }
+        { label: 'Login', icon: 'pi pi-sign-in', routerLink: '/login', routerLinkActiveOptions: { exact: true } },
+        { label: 'Register', icon: 'pi pi-user-plus', routerLink: '/register', routerLinkActiveOptions: { exact: true } }
       );
     } else {
       this.items.push(
