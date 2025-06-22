@@ -49,7 +49,6 @@ export class LoginComponent implements OnInit {
         email: this.loginForm.value.email as string,
         password: this.loginForm.value.password as string,
       };
-      console.log(this.loginForm.value);
       this.store.dispatch(beginLogin({ userCred: _userCred }));
     } else {
       this.toast.showFormError();

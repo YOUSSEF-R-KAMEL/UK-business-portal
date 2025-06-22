@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
-import { userState } from "../state/user.state";
-import { duplicateUser, duplicateUserSuccess, loginFail, loginSuccess } from "../actions/user.action";
+import { userAdapter, userState } from "../state/user.state";
+import { duplicateUser, duplicateUserSuccess, loadUser, loadUserFail, loadUserSuccess, loginFail, loginSuccess } from "../actions/user.action";
 import { IUser, IUserInfo } from "../Models/IUser";
 
 const _userReducer = createReducer(
@@ -22,7 +22,24 @@ const _userReducer = createReducer(
       ...state,
       iasDuplicate: action.isDuplicate
     }
-  })
+  }),
+
+  // get all users
+  on(loadUser, (state) => ({
+    ...state,
+    errorMsg: '',
+  })),
+  on(loadUserSuccess, (state, action) => {
+    return userAdapter.setAll(action.list, {
+      ...state,
+      errorMsg: ''
+    })
+  }),
+  on(loadUserFail, (state, action) => ({
+    ...state,
+    errorMsg: action.errorMsg,
+  })),
+
 )
 
 export function UserReducer(state:any, action: any) {

@@ -1,50 +1,93 @@
-<div class="grid p-3 align-items-stretch">
-  <div *ngFor="let article of filteredArticles" class="col-12 md:col-6 lg:col-4 flex">
-    <p-card
-    class="w-full flex flex-column justify-between h-full"
-    [header]="article.title | wordSlice: 7"
-    [subheader]="article.author">
+    <!-- Header with Add Button -->
+    <div class="flex justify-content-between align-items-center mb-4">
+      <h2 class="text-2xl font-bold m-0">Articles</h2>
+      <p-button
+        (click)="showDialog()"
+        label="Add Article"
+        icon="pi pi-plus"
+        severity="primary" />
+    </div>
 
-      <ng-template pTemplate="header">
-        <img
-          *ngIf="article.urlToImage"
-          [src]="article.urlToImage"
-          alt="article image"
-          class="w-full h-12rem object-cover border-round-top" />
-      </ng-template>
-
-      <div class="text-sm text-color-secondary mb-2">
-        {{ article.source.name }}
-        {{ article.publishedAt | date: 'mediumDate' }}
+    <!-- Filters -->
+    <div class="filter-section flex gap-3">
+      <div class="flex-1">
+        <span class="p-input-icon-left w-full">
+          <i class="pi pi-search"></i>
+          <input
+            pInputText
+            type="text"
+            placeholder="Search associates..."
+            [(ngModel)]="globalFilter"
+            (ngModelChange)="applyFilters()"
+            class="w-full" />
+        </span>
       </div>
+    </div>
 
-      <p class="line-clamp-3">
-        {{ article.description | wordSlice:5 }}
-      </p>
+    <!-- Table -->
+  <div class="grid mt-2 align-items-stretch">
+      @for (article of filteredArticles.slice(0, num); track $index) {
+        <div class="col-12 md:col-6 lg:col-4 xl:col-3">
+          <p-card
+          class="w-full flex flex-column justify-between h-full"
+          [header]="article.title | wordSlice: 7"
+          [subheader]="article.author">
 
-      <div class="footer mt-3 flex justify-content-between align-items-center">
-        <a
-          [href]="article.url"
-          target="_blank">
-          <p-button label="Read more" icon="pi pi-arrow-up-right"></p-button>
-        </a>
+            <ng-template pTemplate="header">
+              <img
+                *ngIf="article.urlToImage"
+                [src]="article.urlToImage"
+                alt="article image"
+                class="w-full h-12rem object-cover border-round-top" />
+            </ng-template>
+
+            <div class="text-sm text-color-secondary mb-2">
+              {{ article.name }}
+              {{ article.publishedAt | date: 'mediumDate' }}
+            </div>
+
+            <p class="line-clamp-3">
+              {{ article.description | wordSlice:5 }}
+            </p>
+
+            <div class="footer mt-3 flex justify-content-between align-items-center">
+              <a
+                [href]="article.url"
+                target="_blank">
+                <p-button label="Read more" icon="pi pi-arrow-up-right"></p-button>
+              </a>
 
 
-        <div class="flex gap-2">
-          <p-button
-            icon="pi pi-pencil"
-            size="small"
-            severity="secondary"
-            (click)="editArticle(article)">
-          </p-button>
-          <p-button
-            icon="pi pi-trash"
-            size="small"
-            severity="danger"
-            (click)="deleteArticle(article)">
-          </p-button>
+              <div class="flex gap-2">
+                <p-button
+                  icon="pi pi-pencil"
+                  size="small"
+                  severity="secondary"
+                  (click)="editArticle(article)">
+                </p-button>
+                <p-button
+                  icon="pi pi-trash"
+                  size="small"
+                  severity="danger"
+                  (click)="deleteArticle(article)">
+                </p-button>
+              </div>
+            </div>
+          </p-card>
         </div>
-      </div>
-    </p-card>
+      }
   </div>
-</div>
+
+  <div class="text-center mt-4" *ngIf="filteredArticles.length > 8">
+    <p-button
+      [label]="showAll ? 'View less' : 'View all'"
+      icon="pi pi-angle-down"
+      (click)="toggleShowAll()"
+      class="p-button-sm">
+    </p-button>
+  </div>
+  <!-- Add Associate Dialog -->
+  <app-add-article></app-add-article>
+
+  <!-- Confirm Dialog for Delete -->
+  <p-confirmDialog></p-confirmDialog>

@@ -31,19 +31,18 @@
     ></p-password>
   }
 
-  @if (type === 'date') {
-    <p-calendar
-      [inputId]="id"
-      dateFormat="yy-mm-dd"
-      class="w-full"
-      [showIcon]="true"
-      [placeholder]="placeholder"
-      [class.ng-invalid]="isInvalid && (touched || dirty)"
-      [class.p-invalid]="isInvalid && (touched || dirty)"
-      [class.ng-valid]="isValid"
-      [(ngModel)]="value"
-      (onBlur)="onBlur()">
-    </p-calendar>
+  @if (type === 'date' && id) {
+    <input
+    [id]="id"
+    [type]="type"
+    pInputText
+    [placeholder]="placeholder"
+    class="w-full"
+    [class.ng-invalid]="isInvalid && (touched || dirty)"
+    [class.p-invalid]="isInvalid && (touched || dirty)"
+    [class.ng-valid]="isValid"
+    [(ngModel)]="value"
+    (blur)="onBlur()" />
   }
 
   <!-- Textarea -->

@@ -14,10 +14,6 @@ export class UserService {
   private userSubject = new BehaviorSubject<IUserInfo | null>(this.getUserData());
   user$ = this.userSubject.asObservable();
 
-  // getAssociates(): Observable<IAssociate[]> {
-  //   return this._httpClient.get<IAssociate[]>(this.baseUrl);
-  // }
-
   register(data: IUser): Observable<IUser> {
     return this._httpClient.post<IUser>(this.baseUrl, data);
   }
@@ -35,7 +31,6 @@ export class UserService {
     this.userSubject.next(data);
   }
 
-
   getUserData(): IUserInfo | null {
     const user = localStorage.getItem('user');
     return user ? JSON.parse(user) as IUserInfo : null;
@@ -44,6 +39,10 @@ export class UserService {
   logout() {
     localStorage.removeItem('user');
     this.userSubject.next(null);
+  }
+
+  getAllUsers(): Observable<IUser[]>{
+    return this._httpClient.get<IUser[]>(this.baseUrl)
   }
 
 }

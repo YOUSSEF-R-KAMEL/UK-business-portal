@@ -5,7 +5,7 @@ import { mergeMap } from "rxjs/operators";
 import { UserService } from "../../feature/Services/user.service";
 import { showAlert } from "../actions/App.actions";
 import { Router } from "@angular/router";
-import { beginLogin, beginRegister, duplicateUser, duplicateUserSuccess } from "../actions/user.action";
+import { beginLogin, beginRegister, duplicateUser, duplicateUserSuccess, loadUser, loadUserFail, loadUserSuccess } from "../actions/user.action";
 
 @Injectable()
 export class UserEffects {
@@ -84,6 +84,23 @@ export class UserEffects {
             }),
             catchError((error) =>
               of(showAlert({ message: "registration failed: " + error.message, resultType: "error" }))
+            )
+          )
+        )
+      );
+    },
+    { useEffectsErrorHandler: false }
+  );
+
+  loadUsers$ = createEffect(
+    () => {
+      return this.actions$.pipe(
+        ofType(loadUser),
+        exhaustMap(() =>
+          this._userService.getAllUsers().pipe(
+            map((data) => loadUserSuccess({ list: data })),
+            catchError((error) =>
+              of(loadUserFail({ errorMsg: error.message }))
             )
           )
         )

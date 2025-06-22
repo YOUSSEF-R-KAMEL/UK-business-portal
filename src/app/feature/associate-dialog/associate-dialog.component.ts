@@ -25,10 +25,10 @@ import { FormInputComponent } from '../../shared/form-input/form-input.component
     ReactiveFormsModule,
     FormInputComponent,
   ],
-  templateUrl: './add-associate.component.html',
-  styleUrl: './add-associate.component.scss',
+  templateUrl: './associate-dialog.component.html',
+  styleUrl: './associate-dialog.component.scss',
 })
-export class AddAssociateComponent implements OnInit {
+export class AssociateDialogComponent implements OnInit {
   @Input() visible: boolean = false;
   @Output() visibleChange = new EventEmitter<boolean>();
 
@@ -47,11 +47,23 @@ export class AddAssociateComponent implements OnInit {
   ];
 
   associateGroups = [
-    { label: 'Development', value: 'development' },
-    { label: 'Design', value: 'design' },
-    { label: 'Marketing', value: 'marketing' },
-    { label: 'Sales', value: 'sales' },
-    { label: 'HR', value: 'hr' },
+    { label: 'The Washington Post', value: 'the-washington-post' },
+    { label: 'Fortune', value: 'fortune' },
+    { label: 'TheStreet', value: 'thestreet' },
+    { label: 'Wired', value: 'wired' },
+    { label: "Tom's Guide", value: 'toms-guide' },
+    { label: 'Hollywood Reporter', value: 'hollywood-reporter' },
+    { label: 'AMBCrypto', value: 'ambcrypto' },
+    { label: 'Financial Times', value: 'financial-times' },
+    { label: 'ZDNet', value: 'zdnet' },
+    { label: 'Motley Fool', value: 'motley-fool' },
+    { label: 'KSL.com', value: 'ksl-com' },
+    { label: 'Bloomberg', value: 'bloomberg' },
+    { label: 'STAT', value: 'stat' },
+    { label: 'New York Post', value: 'new-york-post' },
+    { label: 'CNN', value: 'cnn' },
+    { label: 'BBC News', value: 'bbc-news' },
+    { label: 'The Guardian', value: 'the-guardian' }
   ];
 
   ngOnInit() {

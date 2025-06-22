@@ -9,19 +9,19 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { MessageModule } from 'primeng/message';
 import { ConfirmationService } from 'primeng/api';
-import { AddArticleComponent } from '../add-article/add-article.component';
+import { ArticleDialogComponent } from '../article-dialog/article-dialog.component';
 import { IArticle } from '../../Store/Models/IArticle';
 import { getArticleList } from '../../Store/selectors/article.selectors';
-import { loadArticle } from '../../Store/actions/article.action';
+import { deleteArticle, loadArticle } from '../../Store/actions/article.action';
 import { getErrorMsg } from '../../Store/selectors/associate.selectors';
 import { DropdownModule } from 'primeng/dropdown';
 import { TagModule } from 'primeng/tag';
 import { TooltipModule } from 'primeng/tooltip';
-import { ArticleService } from '../Services/article.service';
 import { CardModule } from 'primeng/card';
 import { CommonModule } from '@angular/common';
 import { WordSlicePipe } from './word-slice.pipe';
 import { RippleModule } from 'primeng/ripple';
+import { showAlert } from '../../Store/actions/App.actions';
 
 @Component({
   selector: 'app-article-list',
@@ -40,24 +40,23 @@ import { RippleModule } from 'primeng/ripple';
     MessageModule,
     WordSlicePipe,
     RippleModule,
+    ArticleDialogComponent
   ],
   providers: [ConfirmationService],
   templateUrl: './article-list.component.html',
   styleUrl: './article-list.component.scss'
 })
 export class ArticleListComponent implements OnInit {
-  @ViewChild(AddArticleComponent) addArticleComponent!: AddArticleComponent;
+  @ViewChild(ArticleDialogComponent) addArticleComponent!: ArticleDialogComponent;
 
   private store = inject(Store);
   private confirmationService = inject(ConfirmationService);
-  private articleService = inject(ArticleService);
+  showAll: boolean = false;
+  num: number = 8
 
   articleList$: Observable<IArticle[]> = this.store.select(getArticleList);
   filteredArticles: IArticle[] = [];
   currentArticles: IArticle[] = [];
-  first: number = 0;
-  rows: number = 10;
-  totalRecords: number = 0;
   globalFilter: string = '';
   errorMsg = '';
 
@@ -66,10 +65,6 @@ export class ArticleListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.articleService.getArticles().subscribe((res) => {
-      console.log(res);
-
-    })
     this.store.dispatch(loadArticle());
     this.store.select(getErrorMsg).subscribe(res => {
       this.errorMsg = res
@@ -78,8 +73,6 @@ export class ArticleListComponent implements OnInit {
     this.articleList$.subscribe(articles => {
       this.currentArticles = articles;
       this.applyFilters();
-      console.log(this.currentArticles)
-      console.log(this.filteredArticles)
     });
   }
 
@@ -96,13 +89,6 @@ export class ArticleListComponent implements OnInit {
     }
 
     this.filteredArticles = filtered;
-    this.totalRecords = this.filteredArticles.length;
-    this.first = 0;
-  }
-
-  onPageChange(event: any): void {
-    this.first = event.first;
-    this.rows = event.rows;
   }
 
   editArticle(article: IArticle) {
@@ -115,12 +101,17 @@ export class ArticleListComponent implements OnInit {
       header: 'Delete Confirmation',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
-        // this.store.dispatch(deleteArticle({ id: article.id }));
-        // this.store.dispatch(showAlert({ message: 'Article deleted successfully!', resultType: 'success' }));
+        this.store.dispatch(deleteArticle({ id: article.id }));
+        this.store.dispatch(showAlert({ message: 'Article deleted successfully!', resultType: 'success' }));
       },
       reject: () => {
-        // this.store.dispatch(showAlert({ message: 'Delete operation cancelled.', resultType: 'info' }));
+        this.store.dispatch(showAlert({ message: 'Delete operation cancelled.', resultType: 'info' }));
       }
     });
+  }
+
+  toggleShowAll() {
+    this.showAll = !this.showAll;
+    this.num = this.showAll ? 100 : 8
   }
 }

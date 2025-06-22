@@ -1,44 +1,44 @@
 {
   "Associates": [
     {
+      "id": 1,
       "name": "Ahmed Hassan",
       "email": "ahmed.hassan@company.com",
       "phone": "01012345678",
       "address": "123 Main Street, Cairo, Egypt",
       "type": "part-time",
-      "associateGroup": "development",
-      "status": true,
-      "id": 1
+      "associateGroup": "the-washington-post",
+      "status": true
     },
     {
+      "id": 2,
       "name": "Fatima Ali",
       "email": "fatima.ali@company.com",
       "phone": "01123456789",
       "address": "456 Garden Avenue, Alexandria, Egypt",
       "type": "full-time",
-      "associateGroup": "design",
-      "status": false,
-      "id": 2
+      "associateGroup": "fortune",
+      "status": false
     },
     {
+      "id": 3,
       "name": "Mohammed Omar",
       "email": "mohammed.omar@company.com",
       "phone": "01234567890",
       "address": "789 Business District, Giza, Egypt",
       "type": "part-time",
-      "associateGroup": "marketing",
-      "status": true,
-      "id": 3
+      "associateGroup": "thestreet",
+      "status": true
     },
     {
+      "id": 4,
       "name": "Aisha Mahmoud",
       "email": "aisha.mahmoud@company.com",
       "phone": "01512345678",
       "address": "321 Innovation Street, Cairo, Egypt",
       "type": "contract",
-      "associateGroup": "development",
-      "status": true,
-      "id": 4
+      "associateGroup": "wired",
+      "status": true
     },
     {
       "id": 5,
@@ -47,7 +47,7 @@
       "phone": "01098765432",
       "type": "full-time",
       "address": "654 Tech Park, Alexandria, Egypt",
-      "associateGroup": "sales",
+      "associateGroup": "toms-guide",
       "status": true
     },
     {
@@ -57,7 +57,7 @@
       "phone": "01187654321",
       "type": "intern",
       "address": "987 Student Area, Cairo, Egypt",
-      "associateGroup": "development",
+      "associateGroup": "hollywood-reporter",
       "status": true
     },
     {
@@ -67,7 +67,7 @@
       "phone": "01276543210",
       "type": "full-time",
       "address": "147 Creative Zone, Giza, Egypt",
-      "associateGroup": "design",
+      "associateGroup": "ambcrypto",
       "status": false
     },
     {
@@ -77,7 +77,7 @@
       "phone": "01565432109",
       "type": "part-time",
       "address": "258 Marketing Hub, Alexandria, Egypt",
-      "associateGroup": "marketing",
+      "associateGroup": "financial-times",
       "status": true
     },
     {
@@ -87,7 +87,7 @@
       "phone": "01054321098",
       "type": "contract",
       "address": "369 HR Center, Cairo, Egypt",
-      "associateGroup": "hr",
+      "associateGroup": "zdnet",
       "status": true
     },
     {
@@ -97,439 +97,462 @@
       "phone": "01143210987",
       "type": "full-time",
       "address": "741 Sales District, Giza, Egypt",
-      "associateGroup": "sales",
+      "associateGroup": "motley-fool",
       "status": true
     },
     {
+      "id": 11,
       "name": "‪Youssef Raafat 02‬‏",
       "email": "se.youssefrafat@gmail.com",
       "phone": "01278004938",
       "address": "90 st fargaly mohamed hassanen",
       "type": "part-time",
-      "associateGroup": "development",
-      "status": false,
-      "id": 11
+      "associateGroup": "ksl-com",
+      "status": false
     }
   ],
   "Users": [
     {
       "name": "Kitra Robles",
-      "password": "Pa$$w0rd!",
-      "email": "wedypyry@mailinator.com",
-      "phone": "01278000000",
+      "password": "123YYyy@@",
+      "email": "youssefrafat70@gmail.com",
+      "phone": "01278004938",
       "role": "user",
-      "gender": "male",
+      "gender": "Male",
       "status": true,
-      "confirmPassword": "Pa$$w0rd!",
+      "confirmPassword": "123YYyy@@",
       "id": 1
     },
     {
-      "name": "‪Youssef Raafat‬‏",
-      "password": "123YYyy@@",
-      "email": "youssefrafat70@gmail.com",
-      "phone": "01278004938",
-      "role": "user",
-      "gender": "male",
+      "name": "Lana Smith",
+      "email": "lana.smith@mailinator.com",
+      "password": "Strong123!",
+      "confirmPassword": "Strong123!",
+      "phone": "01278000001",
+      "role": "admin",
+      "gender": "Female",
       "status": true,
-      "confirmPassword": "123YYyy@@",
       "id": 2
     },
     {
-      "name": "‪Youssef Raafat‬‏",
-      "password": "123YYyy@@",
-      "email": "youssefrafat70@gmail.com",
-      "phone": "01278004938",
+      "id": 3,
+      "name": "Omar Saleh",
+      "email": "omar.saleh@mailinator.com",
+      "password": "Omar@2025",
+      "confirmPassword": "Omar@2025",
+      "phone": "01278000002",
       "role": "user",
-      "gender": "male",
-      "status": true,
-      "confirmPassword": "123YYyy@@",
-      "id": 3
+      "gender": "Male",
+      "status": false
     },
     {
-      "name": "‪Youssef Raafat‬‏",
-      "password": "123YYyy@@",
-      "email": "youssefrafat70@gmail.com",
-      "phone": "01278004938",
-      "role": "user",
-      "gender": "male",
-      "status": false,
-      "confirmPassword": "123YYyy@@",
-      "id": 4
+      "id": 4,
+      "name": "Emily Rose",
+      "email": "emily.rose@mailinator.com",
+      "password": "Emily#123",
+      "confirmPassword": "Emily#123",
+      "phone": "01278000003",
+      "role": "moderator",
+      "gender": "Female",
+      "status": true
     },
     {
-      "name": "‪Youssef Raafat‬‏",
-      "password": "123YYyy@@",
-      "email": "youssefrafat70@gmail.com",
-      "phone": "01278004938",
+      "id": 5,
+      "name": "James Lee",
+      "email": "james.lee@mailinator.com",
+      "password": "LeePass456!",
+      "confirmPassword": "LeePass456!",
+      "phone": "01278000004",
       "role": "user",
-      "gender": "male",
-      "status": true,
-      "confirmPassword": "123YYyy@@",
-      "id": 5
+      "gender": "Male",
+      "status": false
     },
     {
-      "name": "‪Youssef Raafat‬‏",
-      "password": "102030",
-      "email": "youssef4@gmail.com",
-      "phone": "01278004938",
+      "id": 6,
+      "name": "Sara Nabil",
+      "email": "sara.nabil@mailinator.com",
+      "password": "Sara1234@",
+      "confirmPassword": "Sara1234@",
+      "phone": "01278000005",
       "role": "admin",
-      "gender": "male",
-      "status": true,
-      "confirmPassword": "102030",
-      "id": 6
+      "gender": "Female",
+      "status": true
+    },
+    {
+      "id": 7,
+      "name": "David Kim",
+      "email": "david.kim@mailinator.com",
+      "password": "David@789",
+      "confirmPassword": "David@789",
+      "phone": "01278000006",
+      "role": "user",
+      "gender": "Male",
+      "status": true
+    },
+    {
+      "id": 8,
+      "name": "Fatma Ali",
+      "email": "fatma.ali@mailinator.com",
+      "password": "Fatma@321",
+      "confirmPassword": "Fatma@321",
+      "phone": "01278000007",
+      "role": "moderator",
+      "gender": "Female",
+      "status": true
+    },
+    {
+      "id": 9,
+      "name": "Tom Brown",
+      "email": "tom.brown@mailinator.com",
+      "password": "Tom@Brown1",
+      "confirmPassword": "Tom@Brown1",
+      "phone": "01278000008",
+      "role": "user",
+      "gender": "Male",
+      "status": false
+    },
+    {
+      "id": 10,
+      "name": "Nora Adel",
+      "email": "nora.adel@mailinator.com",
+      "password": "Nora@567",
+      "confirmPassword": "Nora@567",
+      "phone": "01278000009",
+      "role": "admin",
+      "gender": "Female",
+      "status": true
+    },
+    {
+      "id": 11,
+      "name": "Rami Khaled",
+      "email": "rami.khaled@mailinator.com",
+      "password": "Rami@1234",
+      "confirmPassword": "Rami@1234",
+      "phone": "01278000010",
+      "role": "user",
+      "gender": "Male",
+      "status": true
+    },
+    {
+      "id": 12,
+      "name": "Julia Adams",
+      "email": "julia.adams@mailinator.com",
+      "password": "Julia!456",
+      "confirmPassword": "Julia!456",
+      "phone": "01278000011",
+      "role": "moderator",
+      "gender": "Female",
+      "status": true
+    },
+    {
+      "id": 13,
+      "name": "Ahmad Zaki",
+      "email": "ahmad.zaki@mailinator.com",
+      "password": "Ahmad@789",
+      "confirmPassword": "Ahmad@789",
+      "phone": "01278000012",
+      "role": "admin",
+      "gender": "Male",
+      "status": false
+    },
+    {
+      "id": 14,
+      "name": "Nancy Drew",
+      "email": "nancy.drew@mailinator.com",
+      "password": "Nancy#123",
+      "confirmPassword": "Nancy#123",
+      "phone": "01278000013",
+      "role": "user",
+      "gender": "Female",
+      "status": true
+    },
+    {
+      "id": 15,
+      "name": "Mustafa Amin",
+      "email": "mustafa.amin@mailinator.com",
+      "password": "Mustafa@321",
+      "confirmPassword": "Mustafa@321",
+      "phone": "01278000014",
+      "role": "user",
+      "gender": "Male",
+      "status": true
+    },
+    {
+      "id": 16,
+      "name": "Huda Hussein",
+      "email": "huda.hussein@mailinator.com",
+      "password": "Huda$2025",
+      "confirmPassword": "Huda$2025",
+      "phone": "01278000015",
+      "role": "admin",
+      "gender": "Female",
+      "status": false
+    },
+    {
+      "id": 17,
+      "name": "George Clark",
+      "email": "george.clark@mailinator.com",
+      "password": "George@007",
+      "confirmPassword": "George@007",
+      "phone": "01278000016",
+      "role": "moderator",
+      "gender": "Male",
+      "status": true
+    },
+    {
+      "id": 18,
+      "name": "Mona Saeed",
+      "email": "mona.saeed@mailinator.com",
+      "password": "Mona_1234",
+      "confirmPassword": "Mona_1234",
+      "phone": "01278000017",
+      "role": "user",
+      "gender": "Female",
+      "status": false
+    },
+    {
+      "id": 19,
+      "name": "Yara Mostafa",
+      "email": "yara.mostafa@mailinator.com",
+      "password": "YaraPass!",
+      "confirmPassword": "YaraPass!",
+      "phone": "01278000018",
+      "role": "admin",
+      "gender": "Female",
+      "status": true
+    },
+    {
+      "id": 20,
+      "name": "Adam Noor",
+      "email": "adam.noor@mailinator.com",
+      "password": "Adam@Pass1",
+      "confirmPassword": "Adam@Pass1",
+      "phone": "01278000019",
+      "role": "user",
+      "gender": "Male",
+      "status": true
     }
   ],
   "articles": [
     {
-    "source": {
-    "id": "the-washington-post",
-    "name": "The Washington Post"
-    },
-    "author": "Jacob Bogage",
-    "title": "Trump and GOP’s tax bill would sell off USPS’s brand-new EVs - The Washington Post",
-    "description": "A little-noticed part of Trump’s tax and immigration package would see the U.S. undo billions of dollars in electric vehicle investments by the Postal Service.",
-    "url": "https://www.washingtonpost.com/business/2025/06/21/trump-usps-trucks-taxes/",
-    "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/K4OH5L3P6FHFDEF4B4U3G2VGCU.jpg&w=1440",
-    "publishedAt": "2025-06-21T18:00:00Z",
-    "content": "A little-noticed provision of President Donald Trump and Republicans massive tax and immigration legislation would force the government to undo billions of dollars in electric vehicle investments mad… [+5508 chars]"
+      "id": 1,
+      "name": "The Washington Post",
+      "author": "Jacob Bogage",
+      "title": "Trump and GOP’s tax bill would sell off USPS’s brand-new EVs - The Washington Post",
+      "description": "A little-noticed part of Trump’s tax and immigration package would see the U.S. undo billions of dollars in electric vehicle investments by the Postal Service.",
+      "url": "https://www.washingtonpost.com/business/2025/06/21/trump-usps-trucks-taxes/",
+      "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/K4OH5L3P6FHFDEF4B4U3G2VGCU.jpg&w=1440",
+      "publishedAt": "2025-06-21T18:00:00Z",
+      "content": "A little-noticed provision of President Donald Trump and Republicans massive tax and immigration legislation would force the government to undo billions of dollars in electric vehicle investments mad… [+5508 chars]"
     },
     {
-    "source": {
-    "id": "fortune",
-    "name": "Fortune"
-    },
-    "author": "Jason Ma",
-    "title": "Top economist who previously sounded the alarm on tariffs sees a possible scenario where Trump 'outsmarted all of us' - Fortune",
-    "description": "\"This would seem like a victory for the world and yet would produce $400 billion of annual revenue for US taxpayers.\"",
-    "url": "https://fortune.com/2025/06/21/trump-tariffs-outsmarted-us-all-10-percent-federal-revenue-economy/",
-    "urlToImage": "https://fortune.com/img-assets/wp-content/uploads/2025/06/GettyImages-2220475391-e1750521440372.jpg?resize=1200,600",
-    "publishedAt": "2025-06-21T17:06:00Z",
-    "content": "Businesses and consumers remain in limbo over what will happen next with President Donald Trumps tariffs, but a top economist sees a way to leave them in place and still deliver a victory for the wor… [+3323 chars]"
+      "id": 2,
+      "name": "Fortune",
+      "author": "Jason Ma",
+      "title": "Top economist who previously sounded the alarm on tariffs sees a possible scenario where Trump 'outsmarted all of us' - Fortune",
+      "description": "\"This would seem like a victory for the world and yet would produce $400 billion of annual revenue for US taxpayers.\"",
+      "url": "https://fortune.com/2025/06/21/trump-tariffs-outsmarted-us-all-10-percent-federal-revenue-economy/",
+      "urlToImage": "https://fortune.com/img-assets/wp-content/uploads/2025/06/GettyImages-2220475391-e1750521440372.jpg?resize=1200,600",
+      "publishedAt": "2025-06-21T17:06:00Z",
+      "content": "Businesses and consumers remain in limbo over what will happen next with President Donald Trumps tariffs..."
     },
     {
-    "source": {
-    "id": null,
-    "name": "TheStreet"
-    },
-    "author": "TheStreet",
-    "title": "Major supermarket chain closing 60 locations - TheStreet",
-    "description": "Estimates point to President Donald Trump's tariff and trade policies having a tangible impact on Social Security benefits come 2026.",
-    "url": "https://www.thestreet.com/retail/major-supermarket-chain-closing-60-locations",
-    "urlToImage": "https://www.thestreet.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_640/MjE1MTk2Njg2MzcxMjY4MTE1/costco_checkout_cp_052725.jpg",
-    "publishedAt": "2025-06-21T15:47:19Z",
-    "content": "Eli Lillys daily anti-obesity pill orforglipron appears to be as good at spurring weight loss and lowering blood sugar in diabetes patients as popular injectable GLP-1 drugs like Ozempic, according t… [+3618 chars]"
+      "id": 3,
+      "name": "TheStreet",
+      "author": "TheStreet",
+      "title": "Major supermarket chain closing 60 locations - TheStreet",
+      "description": "Estimates point to President Donald Trump's tariff and trade policies having a tangible impact on Social Security benefits come 2026.",
+      "url": "https://www.thestreet.com/retail/major-supermarket-chain-closing-60-locations",
+      "urlToImage": "https://www.thestreet.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_640/MjE1MTk2Njg2MzcxMjY4MTE1/costco_checkout_cp_052725.jpg",
+      "publishedAt": "2025-06-21T15:47:19Z",
+      "content": "The supermarket chain is shutting down 60 stores due to ongoing financial pressure..."
     },
     {
-    "source": {
-    "id": "wired",
-    "name": "Wired"
-    },
-    "author": "Emily Mullin",
-    "title": "Eli Lilly’s Obesity Pill Appears to Work as Well as Injected GLP-1s - wired.com",
-    "description": "New data from a Phase 3 trial show that the daily anti-obesity pill may be as safe and effective as drugs like Mounjaro and Ozempic for weight loss and lowering blood sugar.",
-    "url": "https://www.wired.com/story/lilly-obesity-pill-effective-orforglipron-injected-glp-1-ozempic/",
-    "urlToImage": "https://media.wired.com/photos/68553f7f3a1ba10fac8debfe/191:100/w_1280,c_limit/062025_Orforglipron-2.jpg",
-    "publishedAt": "2025-06-21T13:01:00Z",
-    "content": "Eli Lillys daily anti-obesity pill orforglipron appears to be as good at spurring weight loss and lowering blood sugar in diabetes patients as popular injectable GLP-1 drugs like Ozempic, according t… [+3618 chars]"
+      "id": 4,
+      "name": "Wired",
+      "author": "Emily Mullin",
+      "title": "Eli Lilly’s Obesity Pill Appears to Work as Well as Injected GLP-1s - wired.com",
+      "description": "New data from a Phase 3 trial show that the daily anti-obesity pill may be as safe and effective as drugs like Mounjaro and Ozempic.",
+      "url": "https://www.wired.com/story/lilly-obesity-pill-effective-orforglipron-injected-glp-1-ozempic/",
+      "urlToImage": "https://media.wired.com/photos/68553f7f3a1ba10fac8debfe/191:100/w_1280,c_limit/062025_Orforglipron-2.jpg",
+      "publishedAt": "2025-06-21T13:01:00Z",
+      "content": "The pill could be a breakthrough in treating obesity and diabetes patients..."
     },
     {
-    "source": {
-    "id": null,
-    "name": "Tom's Guide"
-    },
-    "author": "Darragh Murphy",
-    "title": "16 billion password data breach hits Apple, Google, Facebook and more — LIVE updates and how to stay safe - Tom's Guide",
-    "description": "Latest updates on one of the largest data breaches",
-    "url": "https://www.tomsguide.com/news/live/16-billion-passwords-data-breach",
-    "urlToImage": "https://cdn.mos.cms.futurecdn.net/uRAonb9SQkGA2QUPsYLi3.jpg",
-    "publishedAt": "2025-06-21T12:55:38Z",
-    "content": "2025-06-21T12:55:27.763ZPassword managers can be a life-saver\r\n(Image credit: Tero Vesalainen / Shutterstock)\r\nThis record-breaking data breach included URLs, usernames, and, most importantly, passwo… [+31922 chars]"
+      "id": 5,
+      "name": "Tom's Guide",
+      "author": "Darragh Murphy",
+      "title": "16 billion password data breach hits Apple, Google, Facebook and more — LIVE updates and how to stay safe - Tom's Guide",
+      "description": "Latest updates on one of the largest data breaches.",
+      "url": "https://www.tomsguide.com/news/live/16-billion-passwords-data-breach",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/uRAonb9SQkGA2QUPsYLi3.jpg",
+      "publishedAt": "2025-06-21T12:55:38Z",
+      "content": "This breach exposed billions of passwords — learn how to protect yourself..."
     },
     {
-    "source": {
-    "id": null,
-    "name": "TheStreet"
-    },
-    "author": "Daniel Kline",
-    "title": "Struggling restaurant chain likely to shut down or be sold - TheStreet",
-    "description": "The chain's owner has already closed about one third of its locations.",
-    "url": "https://www.thestreet.com/restaurants/struggling-restaurant-chain-likely-to-shut-down-or-be-sold",
-    "urlToImage": "https://www.thestreet.com/.image/ar_1.91%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_1200/MTk5NDI4MjExMDg2NTk5NTgy/a-store-closed-sign-lead.jpg",
-    "publishedAt": "2025-06-21T12:42:00Z",
-    "content": "Sometimes, the small things get lost when owned by a large company.\r\nIn multiple cases, Chipotle shut down nascent brands because it seemed impossible for them to grow to a point where they materiall… [+3913 chars]"
+      "id": 6,
+      "name": "TheStreet",
+      "author": "Daniel Kline",
+      "title": "Struggling restaurant chain likely to shut down or be sold - TheStreet",
+      "description": "The chain's owner has already closed about one third of its locations.",
+      "url": "https://www.thestreet.com/restaurants/struggling-restaurant-chain-likely-to-shut-down-or-be-sold",
+      "urlToImage": "https://www.thestreet.com/.image/ar_1.91%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_1200/MTk5NDI4MjExMDg2NTk5NTgy/a-store-closed-sign-lead.jpg",
+      "publishedAt": "2025-06-21T12:42:00Z",
+      "content": "The company is exploring strategic options after poor performance..."
     },
     {
-    "source": {
-    "id": null,
-    "name": "Hollywood Reporter"
-    },
-    "author": "Beth Landman",
-    "title": "The Bezos-Sánchez Merger: The Ultimate Inside Guide to the Wedding of the Century - The Hollywood Reporter",
-    "description": "Everyone from Leo to Ivanka Trump has RSVP’d to the star-packed Venice nuptials. Did your invite get lost in the mail? No worries. We’ve got you covered.",
-    "url": "http://www.hollywoodreporter.com/lifestyle/lifestyle-news/jeff-bezos-lauren-sanchez-wedding-inside-guide-1236293622/",
-    "urlToImage": "https://www.hollywoodreporter.com/wp-content/uploads/2025/06/17town_Bezos_Venice_Static16x9_ChrisMorris.png?w=1296&h=730&crop=1",
-    "publishedAt": "2025-06-21T12:41:34Z",
-    "content": "It’s been nearly 45 years since the term “wedding of the century” was bandied about so freely as it has been in advance of the Jeff Bezos and Lauren Sánchez nuptials, with her own brother saying, “I … [+9598 chars]"
+      "id": 7,
+      "name": "Hollywood Reporter",
+      "author": "Beth Landman",
+      "title": "The Bezos-Sánchez Merger: The Ultimate Inside Guide to the Wedding of the Century - The Hollywood Reporter",
+      "description": "Everyone from Leo to Ivanka Trump has RSVP’d to the star-packed Venice nuptials.",
+      "url": "http://www.hollywoodreporter.com/lifestyle/lifestyle-news/jeff-bezos-lauren-sanchez-wedding-inside-guide-1236293622/",
+      "urlToImage": "https://www.hollywoodreporter.com/wp-content/uploads/2025/06/17town_Bezos_Venice_Static16x9_ChrisMorris.png?w=1296&h=730&crop=1",
+      "publishedAt": "2025-06-21T12:41:34Z",
+      "content": "Inside look at Jeff Bezos and Lauren Sánchez's lavish Venice wedding..."
     },
     {
-    "source": {
-    "id": null,
-    "name": "Ambcrypto.com"
-    },
-    "author": "Gladys Makena",
-    "title": "Ethereum whales sell $321 mln in 60 seconds! Still, a tough battle remains - AMBCrypto",
-    "description": "Are bulls regaining control or will bearish momentum push ETH lower?",
-    "url": "https://ambcrypto.com/ethereum-whales-sell-321-mln-in-60-seconds-still-a-tough-battle-remains/",
-    "urlToImage": "https://ambcrypto.com/wp-content/uploads/2025/06/Gladys-3-2-1000x600.webp",
-    "publishedAt": "2025-06-21T11:03:45Z",
-    "content": "<ul><li>Ethereum’s Taker Sell Volume spiked to $10.3B, reflecting strong market-wide sell pressure from whales and retailers.</li><li>ETH dropped to $2.3K before recovering to $2.4K, as dip-buyers ab… [+2723 chars]"
+      "id": 8,
+      "name": "AMBCrypto",
+      "author": "Gladys Makena",
+      "title": "Ethereum whales sell $321 mln in 60 seconds! Still, a tough battle remains - AMBCrypto",
+      "description": "Are bulls regaining control or will bearish momentum push ETH lower?",
+      "url": "https://ambcrypto.com/ethereum-whales-sell-321-mln-in-60-seconds-still-a-tough-battle-remains/",
+      "urlToImage": "https://ambcrypto.com/wp-content/uploads/2025/06/Gladys-3-2-1000x600.webp",
+      "publishedAt": "2025-06-21T11:03:45Z",
+      "content": "Ethereum markets rocked by massive whale sell-off activity..."
     },
     {
-    "source": {
-    "id": null,
-    "name": "Financial Times"
-    },
-    "author": "Malcolm Moore",
-    "title": "Jet fuel prices soar in Europe as war in Middle East threatens supplies - Financial Times",
-    "description": "Premiums for diesel has also hit 15-month high, highlighting reliance on refined fuels from the Gulf",
-    "url": "https://www.ft.com/content/430b02c1-bd86-42fd-846c-d1e5edbd445a",
-    "urlToImage": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa1209440-49e3-4212-b6ba-5e25bd0005a4.jpg?source=next-barrier-page",
-    "publishedAt": "2025-06-21T11:00:04Z",
-    "content": "Complete digital access to quality analysis and expert insights, complemented with our award-winning Weekend Print edition.\r\n<ul><li></li>Everything in Print<li></li>Weekday Print Edition<li></li>FT … [+202 chars]"
+      "id": 9,
+      "name": "Financial Times",
+      "author": "Malcolm Moore",
+      "title": "Jet fuel prices soar in Europe as war in Middle East threatens supplies - Financial Times",
+      "description": "Premiums for diesel have also hit a 15-month high, highlighting reliance on Gulf exports.",
+      "url": "https://www.ft.com/content/430b02c1-bd86-42fd-846c-d1e5edbd445a",
+      "urlToImage": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa1209440-49e3-4212-b6ba-5e25bd0005a4.jpg?source=next-barrier-page",
+      "publishedAt": "2025-06-21T11:00:04Z",
+      "content": "Fuel markets tighten across Europe amid regional tensions..."
     },
     {
-    "source": {
-    "id": null,
-    "name": "ZDNet"
-    },
-    "author": "Sabrina Ortiz",
-    "title": "Meta's new $399 Oakley smart glasses beat the Ray-Bans in almost every way - ZDNet",
-    "description": "Meta's latest smart glasses are designed for athletes and anyone looking for enhanced video recording features. Here's what you need to know.",
-    "url": "https://www.zdnet.com/article/metas-new-399-oakley-smart-glasses-beat-the-ray-bans-in-almost-every-way/",
-    "urlToImage": "https://www.zdnet.com/a/img/resize/bbd4854fad23e19795d0a2b49b57d0c59c9541dd/2025/06/20/749352bd-b293-466b-b99a-b22666e2fffb/gt42ppsxqaafdsi.jpg?auto=webp&fit=crop&height=675&width=1200",
-    "publishedAt": "2025-06-21T08:00:00Z",
-    "content": "Mark Zuckerberg\r\nSeveral months ago, reports emerged that Meta was looking to expand beyond its current smart glasses lineup into sportier versions. Now the glasses are officially here. \r\nOn Friday, … [+3641 chars]"
+      "id": 10,
+      "name": "ZDNet",
+      "author": "Sabrina Ortiz",
+      "title": "Meta's new $399 Oakley smart glasses beat the Ray-Bans in almost every way - ZDNet",
+      "description": "Meta's latest smart glasses are designed for athletes and content creators.",
+      "url": "https://www.zdnet.com/article/metas-new-399-oakley-smart-glasses-beat-the-ray-bans-in-almost-every-way/",
+      "urlToImage": "https://www.zdnet.com/a/img/resize/bbd4854fad23e19795d0a2b49b57d0c59c9541dd/2025/06/20/749352bd-b293-466b-b99a-b22666e2fffb/gt42ppsxqaafdsi.jpg?auto=webp&fit=crop&height=675&width=1200",
+      "publishedAt": "2025-06-21T08:00:00Z",
+      "content": "Meta releases sport-focused smart glasses with advanced video recording..."
     },
     {
-    "source": {
-    "id": null,
-    "name": "Motley Fool"
-    },
-    "author": "Sean Williams",
-    "title": "Social Security's 2026 Cost-of-Living Adjustment (COLA) Estimate Is Getting a \"Trump Bump\" -- Here's How Much Extra You Might Receive - The Motley Fool",
-    "description": "Estimates point to President Donald Trump's tariff and trade policies having a tangible impact on Social Security benefits come 2026.",
-    "url": "https://www.fool.com/retirement/2025/06/21/social-security-2026-cola-is-getting-a-trump-bump/",
-    "urlToImage": "https://g.foolcdn.com/editorial/images/821840/49178332061_bac99d164c_k.jpg",
-    "publishedAt": "2025-06-21T07:44:00Z",
-    "content": "Estimates point to President Donald Trump's tariff and trade policies having a tangible impact on Social Security benefits come 2026.Last month, Social Security's retired-worker benefit made history,… [+7709 chars]"
+      "id": 11,
+      "name": "Motley Fool",
+      "author": "Sean Williams",
+      "title": "Social Security's 2026 Cost-of-Living Adjustment (COLA) Estimate Is Getting a 'Trump Bump' - Motley Fool",
+      "description": "Trump's trade policies could raise 2026 Social Security COLA rates.",
+      "url": "https://www.fool.com/retirement/2025/06/21/social-security-2026-cola-is-getting-a-trump-bump/",
+      "urlToImage": "https://g.foolcdn.com/editorial/images/821840/49178332061_bac99d164c_k.jpg",
+      "publishedAt": "2025-06-21T07:44:00Z",
+      "content": "Economists anticipate higher benefits as a result of economic policy changes..."
     },
     {
-    "source": {
-    "id": null,
-    "name": "KSL.com"
-    },
-    "author": "Lianne Kolirin, CNN",
-    "title": "Telegram founder Pavel Durov says all his 100-plus children will receive share of his estate - KSL.com",
-    "description": "Pavel Durov, the founder and CEO of instant messaging app Telegram, plans to leave his fortune to the more than 100 children he has fathered, according to an interview published Thursday.",
-    "url": "https://www.ksl.com/article/51332959/telegram-founder-pavel-durov-says-all-his-100-plus-children-will-receive-share-of-his-estate",
-    "urlToImage": "https://img.ksl.com/slc/3090/309015/30901599.jpg?filter=kslv2/responsive_story_lg",
-    "publishedAt": "2025-06-21T02:01:16Z",
-    "content": "DUBAI Pavel Durov, the founder and CEO of instant messaging app Telegram, plans to leave his fortune to the more than 100 children he has fathered.\r\nThe Russian-born tech tycoon has revealed that his… [+2574 chars]"
+      "id": 12,
+      "name": "KSL.com",
+      "author": "Lianne Kolirin",
+      "title": "Telegram founder Pavel Durov says all his 100-plus children will receive share of his estate - KSL.com",
+      "description": "Pavel Durov plans to divide his wealth among over 100 children he fathered.",
+      "url": "https://www.ksl.com/article/51332959/telegram-founder-pavel-durov-says-all-his-100-plus-children-will-receive-share-of-his-estate",
+      "urlToImage": "https://img.ksl.com/slc/3090/309015/30901599.jpg?filter=kslv2/responsive_story_lg",
+      "publishedAt": "2025-06-21T02:01:16Z",
+      "content": "Telegram founder makes headlines with shocking inheritance plan..."
     },
     {
-    "source": {
-    "id": "bloomberg",
-    "name": "Bloomberg"
-    },
-    "author": "Tsuyoshi Inajima, Masaki Kondo",
-    "title": "Toyota to Raise US Auto Prices by More Than $200 From July - Bloomberg",
-    "description": "Toyota Motor Corp. will raise prices of some vehicles it sells in the US by more than $200 starting next month.",
-    "url": "https://www.bloomberg.com/news/articles/2025-06-21/toyota-to-raise-us-auto-prices-by-more-than-200-from-july",
-    "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i3zu2a9hlxzI/v0/1200x800.jpg",
-    "publishedAt": "2025-06-21T01:14:00Z",
-    "content": "Toyota Motor Corp. will raise prices of some vehicles it sells in the US by more than $200 starting next month.\r\nSome Toyota- and Lexus-branded models will see their prices raised by an average of $2… [+107 chars]"
+      "id": 13,
+      "name": "Bloomberg",
+      "author": "Tsuyoshi Inajima",
+      "title": "Toyota to Raise US Auto Prices by More Than $200 From July - Bloomberg",
+      "description": "Toyota announces price hikes amid rising production costs.",
+      "url": "https://www.bloomberg.com/news/articles/2025-06-21/toyota-to-raise-us-auto-prices-by-more-than-200-from-july",
+      "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i3zu2a9hlxzI/v0/1200x800.jpg",
+      "publishedAt": "2025-06-21T01:14:00Z",
+      "content": "New prices to take effect across several Toyota and Lexus models..."
     },
     {
-    "source": {
-    "id": null,
-    "name": "STAT"
-    },
-    "author": "Elaine Chen",
-    "title": "Full data on Novo Nordisk’s new amylin drug raise dosing questions - STAT",
-    "description": "Results for weight-loss drug targeting amylin find similar efficacy across different doses and high rates of side effects, raising questions about which dose Novo will pursue.",
-    "url": "https://www.statnews.com/2025/06/20/novo-nordisk-weight-loss-drug-amylin-hormone-injection-effective-but-side-effects-an-issue/",
-    "urlToImage": "https://www.statnews.com/wp-content/uploads/2025/04/AdobeStock_1068642359_Editorial_Use_Only-1024x576.jpeg",
-    "publishedAt": "2025-06-20T23:30:35Z",
-    "content": "CHICAGO Novo Nordisks next-generation obesity injection targeting the amylin hormone showed substantial weight loss in an early study, but similar efficacy across different doses and high rates of si… [+1023 chars]"
+      "id": 14,
+      "name": "STAT",
+      "author": "Elaine Chen",
+      "title": "Full data on Novo Nordisk’s new amylin drug raise dosing questions - STAT",
+      "description": "Novo Nordisk faces questions about dose selection in its new obesity drug.",
+      "url": "https://www.statnews.com/2025/06/20/novo-nordisk-weight-loss-drug-amylin-hormone-injection-effective-but-side-effects-an-issue/",
+      "urlToImage": "https://www.statnews.com/wp-content/uploads/2025/04/AdobeStock_1068642359_Editorial_Use_Only-1024x576.jpeg",
+      "publishedAt": "2025-06-20T23:30:35Z",
+      "content": "Trial results show similar outcomes across multiple dosages..."
     },
     {
-    "source": {
-    "id": null,
-    "name": "New York Post"
-    },
-    "author": "James Franey",
-    "title": "Barron Trump 'made millions' from crypto tokens: report - New York Post",
-    "description": "The 19-year-old New York University student could have picked up $25 million after taxes from the sale of digital assets by World Liberty Financial, according to Forbes.",
-    "url": "https://nypost.com/2025/06/20/business/barron-trump-made-millions-from-familys-lucrative-crypto-firm-report/",
-    "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2025/06/100765605.jpg?quality=75&strip=all&w=1024",
-    "publishedAt": "2025-06-20T23:27:00Z",
-    "content": "Barron Trump, the youngest son of the 47th President, may have raked in millions of dollars from the sale of crypto tokens linked to the family’s lucrative venture into digital tokens, according to a… [+2156 chars]"
+      "id": 15,
+      "name": "New York Post",
+      "author": "James Franey",
+      "title": "Barron Trump 'made millions' from crypto tokens: report - New York Post",
+      "description": "The youngest Trump reportedly earned millions from a crypto venture.",
+      "url": "https://nypost.com/2025/06/20/business/barron-trump-made-millions-from-familys-lucrative-crypto-firm-report/",
+      "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2025/06/100765605.jpg?quality=75&strip=all&w=1024",
+      "publishedAt": "2025-06-20T23:27:00Z",
+      "content": "Barron Trump’s crypto involvement draws media attention and scrutiny..."
     },
     {
-    "source": {
-    "id": null,
-    "name": "STAT"
-    },
-    "author": "Elizabeth Cooney",
-    "title": "Off-the-shelf stem cell therapy for type 1 diabetes continues to show positive results - STAT",
-    "description": "An off-the-shelf stem cell therapy for type 1 diabetes continues to show positive results, according to a new study.",
-    "url": "https://www.statnews.com/2025/06/20/stem-cell-therapy-type1-diabetes-study/",
-    "urlToImage": "https://www.statnews.com/wp-content/uploads/2025/06/AP264513882840-1024x576.jpg",
-    "publishedAt": "2025-06-20T23:21:57Z",
-    "content": "Twelve people with type 1 diabetes who received an investigational off-the-shelf stem cell therapy were able to produce their own insulin and keep healthy blood glucose levels for at least one year, … [+1015 chars]"
+      "id": 16,
+      "name": "STAT",
+      "author": "Elizabeth Cooney",
+      "title": "Off-the-shelf stem cell therapy for type 1 diabetes continues to show positive results - STAT",
+      "description": "New therapy helps diabetes patients produce insulin naturally.",
+      "url": "https://www.statnews.com/2025/06/20/stem-cell-therapy-type1-diabetes-study/",
+      "urlToImage": "https://www.statnews.com/wp-content/uploads/2025/06/AP264513882840-1024x576.jpg",
+      "publishedAt": "2025-06-20T23:21:57Z",
+      "content": "12 patients maintained stable glucose for over a year with new treatment..."
     },
     {
-    "source": {
-    "id": "cnn",
-    "name": "CNN"
-    },
-    "author": "Bryan Mena",
-    "title": "Trump insults Powell again as another top Fed official joins the call to lower interest rates - CNN",
-    "description": "President Donald Trump on Friday again demanded the Federal Reserve lower interest rates, insulting Fed Chair Jerome Powell in the process.",
-    "url": "https://www.cnn.com/2025/06/20/economy/fed-governor-rate-cut-july",
-    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2097696707.jpg?c=16x9&q=w_800,c_fill",
-    "publishedAt": "2025-06-20T23:15:00Z",
-    "content": "President Donald Trump on Friday again demanded the Federal Reserve lower interest rates, insulting Fed Chair Jerome Powell in the process.\r\nBut this time, Trump added something new: an acknowledgeme… [+5045 chars]"
+      "id": 17,
+      "name": "CNN",
+      "author": "Bryan Mena",
+      "title": "Trump insults Powell again as another top Fed official joins the call to lower interest rates - CNN",
+      "description": "Trump continues his push for rate cuts, criticizing Fed chair.",
+      "url": "https://www.cnn.com/2025/06/20/economy/fed-governor-rate-cut-july",
+      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2097696707.jpg?c=16x9&q=w_800,c_fill",
+      "publishedAt": "2025-06-20T23:15:00Z",
+      "content": "Trump says rate cuts are overdue, Fed chair under fire..."
     },
     {
-      "source": {
-        "id": "bbc-news",
-        "name": "BBC News"
-      },
+      "name": "BBC News",
       "author": "Sarah Thompson",
       "title": "UK Inflation Falls to 2.1% Amid BoE Policy Shift",
       "description": "The Bank of England signals potential rate cuts as inflation cools.",
       "url": "https://www.bbc.com/news/business-uk-inflation",
       "urlToImage": "https://cdn.ainvest.com/aigc/hxcmp/images/compress-1adb727f5f138001.png",
       "publishedAt": "2025-06-21T10:00:00Z",
-      "content": "UK inflation dropped to 2.1%, bringing it closer to the central bank’s target. Economists expect interest rate cuts by Q3..."
+      "content": "Inflation nears BoE target, economists expect rate cuts soon...",
+      "id": 18
     },
     {
-      "source": {
-        "id": "financial-times",
-        "name": "Financial Times"
-      },
+      "id": 19,
+      "name": "Financial Times",
       "author": "James Walker",
       "title": "London Stock Exchange Sees Surge in Tech IPOs",
       "description": "British tech startups are turning to the LSE amid a favorable regulatory shift.",
       "url": "https://www.ft.com/content/uk-tech-ipos-lse",
       "urlToImage": "https://image.cnbcfm.com/api/v1/image/108045302-17284773042024-05-14t173640z_832876608_rc2aq7apgyee_rtrmadp_0_britain-economy.jpeg?v=1728477343",
       "publishedAt": "2025-06-20T14:30:00Z",
-      "content": "The London Stock Exchange has seen a 35% rise in tech listings as confidence returns to UK capital markets..."
+      "content": "LSE sees 35% IPO increase as tech sector booms..."
     },
     {
-      "source": {
-        "id": "guardian",
-        "name": "The Guardian"
-      },
+      "id": 20,
+      "name": "The Guardian",
       "author": "Amelia Brooks",
       "title": "British Retail Sales Rebound After Slow Q1",
       "description": "UK shoppers return to high streets as consumer confidence rises.",
       "url": "https://www.theguardian.com/business/2025/jun/retail-sales-rebound",
       "urlToImage": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F1be26624-6dc9-4069-8315-b58043c9064b.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
       "publishedAt": "2025-06-20T09:20:00Z",
-      "content": "Retail sales in the UK rose by 1.8% in May, reversing a slow start to the year. Clothing and electronics led the growth..."
-    },
-    {
-      "source": {
-        "id": "reuters",
-        "name": "Reuters"
-      },
-      "author": "Oliver Harris",
-      "title": "UK-EU Trade Talks Progress on Financial Services",
-      "description": "Negotiators report significant headway on access for UK firms in EU markets.",
-      "url": "https://www.reuters.com/markets/uk-eu-financial-talks-2025",
-      "urlToImage": "https://www.reuters.com/resizer/v2/T26PT3FV5NO4HPSYH4CSWJGHWM.jpg?auth=d23fae23cb492af86fb39bf3761632cbda49c0719988c05a4faa4aa6af88fd78&width=1080&quality=80",
-      "publishedAt": "2025-06-19T16:45:00Z",
-      "content": "The UK and EU are nearing a deal to streamline financial services access post-Brexit, officials confirmed Thursday..."
-    },
-    {
-      "source": {
-        "id": "cityam",
-        "name": "City A.M."
-      },
-      "author": "Nathan Cole",
-      "title": "British Pound Gains Against Euro Amid Trade Optimism",
-      "description": "Sterling rises on news of improved UK export figures and positive EU sentiment.",
-      "url": "https://www.cityam.com/pound-climbs-trade-hopes",
-      "urlToImage": "https://images.exchangerates.org.uk/uploads/pound-to-euro-1.jpg",
-      "publishedAt": "2025-06-19T13:10:00Z",
-      "content": "The British pound gained 0.8% against the euro following upbeat export reports and optimism over trade negotiations..."
-    },
-    {
-      "source": {
-        "id": "sky-news",
-        "name": "Sky News"
-      },
-      "author": "Laura Mitchell",
-      "title": "UK Government Unveils £1.5B Green Business Grant",
-      "description": "New funding aims to support sustainable innovation across British industries.",
-      "url": "https://news.sky.com/business/green-business-grant-uk",
-      "urlToImage": "https://www.innovationnewsnetwork.com/wp-content/uploads/2024/12/shutterstock_2560955839-696x391.jpg",
-      "publishedAt": "2025-06-18T11:00:00Z",
-      "content": "The UK will roll out £1.5B in grants for green technology startups and energy efficiency programs starting July..."
-    },
-    {
-      "source": {
-        "id": "telegraph",
-        "name": "The Telegraph"
-      },
-      "author": "Henry Adams",
-      "title": "UK Housing Market Cools After Interest Rate Spike",
-      "description": "Mortgage approvals slow as borrowing costs remain high in early 2025.",
-      "url": "https://www.telegraph.co.uk/property/2025/uk-housing-slump",
-      "urlToImage": "https://awhsolicitors.co.uk/wp-content/uploads/2022/07/How-Will-Rising-Interest-Rates-Impact-the-Housing-Market.jpg",
-      "publishedAt": "2025-06-17T17:30:00Z",
-      "content": "Mortgage applications in the UK dropped 12% year-over-year as higher interest rates squeezed homebuyers’ budgets..."
-    },
-    {
-      "source": {
-        "id": "bloomberg",
-        "name": "Bloomberg"
-      },
-      "author": "Clara Whitmore",
-      "title": "UK Fintech Startups Raise Record £3B in Q2",
-      "description": "Fintech continues to thrive as London remains a global financial hub.",
-      "url": "https://www.bloomberg.com/uk-fintech-funding-2025",
-      "urlToImage": "https://startupsmagazine.co.uk/sites/default/files/2025-04/AI%20startups%20raise%20%2422.3%20billion%20in%20Q1%2C%20second-highest%20total%20on%20record.png",
-      "publishedAt": "2025-06-17T08:50:00Z",
-      "content": "VC firms invested over £3 billion in UK fintech firms during Q2, setting a new quarterly record despite global headwinds..."
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "Independent"
-      },
-      "author": "Sophia Patel",
-      "title": "Small Businesses in the UK Demand Tax Relief",
-      "description": "Rising operational costs prompt calls for urgent tax reforms from SMEs.",
-      "url": "https://www.independent.co.uk/business/sme-tax-relief-uk",
-      "urlToImage": "https://smallbusiness-production.s3.amazonaws.com/uploads/2016/06/1-1158-1568x1043.jpg",
-      "publishedAt": "2025-06-16T14:00:00Z",
-      "content": "British small businesses are urging the Treasury to consider tax breaks as energy and transport costs hit record highs..."
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "TechRadar"
-      },
-      "author": "George Black",
-      "title": "UK Businesses Embrace AI to Cut Operational Costs",
-      "description": "A growing number of UK firms are deploying AI tools to streamline processes.",
-      "url": "https://www.techradar.com/news/uk-ai-adoption-2025",
-      "urlToImage": "https://pub-693f7baf8984450ca2a6a42eec72bd69.r2.dev/aiinbusiness.webp",
-      "publishedAt": "2025-06-16T08:30:00Z",
-      "content": "Over 65% of British firms now use AI in some capacity, with applications ranging from customer service to logistics..."
+      "content": "Retail sales rise 1.8% in May driven by electronics and fashion..."
     }
-    ]
+  ]
 }

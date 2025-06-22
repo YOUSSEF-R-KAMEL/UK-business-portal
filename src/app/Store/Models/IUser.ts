@@ -1,4 +1,5 @@
 import { EntityState } from "@ngrx/entity";
+import { getErrorMsg } from './../selectors/article.selectors';
 
 export interface IUser {
   password: string,
@@ -20,5 +21,6 @@ export interface IUserInfo {
 
 export interface IUserModel extends EntityState<IUser> {
   loggedInUser: IUserInfo | null,
-  iasDuplicate: boolean
+  iasDuplicate: boolean,
+  errorMsg: string
 }

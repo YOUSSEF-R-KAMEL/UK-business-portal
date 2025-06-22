@@ -13,25 +13,30 @@ import { Store } from '@ngrx/store';
 import { FormInputComponent } from '../../shared/form-input/form-input.component';
 import { IArticle } from '../../Store/Models/IArticle';
 import { DropdownModule } from 'primeng/dropdown';
+import { addArticle, editArticle } from '../../Store/actions/article.action';
+import { showAlert } from '../../Store/actions/App.actions';
+import { ArticleService } from '../Services/article.service';
 
 @Component({
   selector: 'app-add-article',
   imports: [
+    Dialog,
     ButtonModule,
     InputTextModule,
     DropdownModule,
     ReactiveFormsModule,
     FormInputComponent,
   ],
-  templateUrl: './add-article.component.html',
-  styleUrl: './add-article.component.scss',
+  templateUrl: './article-dialog.component.html',
+  styleUrl: './article-dialog.component.scss',
 })
-export class AddArticleComponent implements OnInit {
+export class ArticleDialogComponent implements OnInit {
   @Input() visible: boolean = false;
   @Output() visibleChange = new EventEmitter<boolean>();
 
   private fb = inject(FormBuilder);
   private store = inject(Store);
+  private _articleService = inject(ArticleService);
 
   articleForm!: FormGroup;
   isEditMode: boolean = false;
@@ -43,10 +48,7 @@ export class AddArticleComponent implements OnInit {
 
   initForm() {
     this.articleForm = this.fb.group({
-      source: this.fb.group({
-        id: ['', Validators.required],
-        name: ['', Validators.required],
-      }),
+      name: ['', Validators.required],
       author: ['', Validators.required],
       title: ['', Validators.required],
       description: ['', Validators.required],
@@ -60,16 +62,16 @@ export class AddArticleComponent implements OnInit {
   onSubmit() {
     if (this.articleForm.valid) {
       if (this.isEditMode && this.editingArticle) {
-        // const updatedData = { ...this.articleForm.value, id: this.editingArticle.id };
-        // this.store.dispatch(editArticle({ inputData: updatedData, id: this.editingArticle.id }));
-        // this.store.dispatch(showAlert({ message: 'Article updated successfully!', resultType: 'success' }));
+        const updatedData = { ...this.articleForm.value, id: this.editingArticle.id };
+        this.store.dispatch(editArticle({ inputData: updatedData, id: this.editingArticle.id }));
+        this.store.dispatch(showAlert({ message: 'Article updated successfully!', resultType: 'success' }));
       } else {
-        // this.store.dispatch(addArticle({ inputData: this.articleForm.value }));
-        // this.store.dispatch(showAlert({ message: 'Article added successfully!', resultType: 'success' }));
+        this.store.dispatch(addArticle({ inputData: this.articleForm.value }));
+        this.store.dispatch(showAlert({ message: 'Article added successfully!', resultType: 'success' }));
       }
       this.closeDialog();
     } else {
-      // this.store.dispatch(showAlert({ message: 'Please fill all required fields correctly.', resultType: 'error' }));
+      this.store.dispatch(showAlert({ message: 'Please fill all required fields correctly.', resultType: 'error' }));
       this.markFormGroupTouched();
     }
   }
@@ -110,8 +112,11 @@ export class AddArticleComponent implements OnInit {
     this.articleForm.reset();
   }
 
-  get source(): FormGroup {
-    return this.articleForm.get('source') as FormGroup;
+  get id(): FormControl {
+    return this.articleForm.get('id') as FormControl;
+  }
+  get name(): FormControl {
+    return this.articleForm.get('name') as FormControl;
   }
   get author(): FormControl {
     return this.articleForm.get('author') as FormControl;
@@ -133,6 +138,12 @@ export class AddArticleComponent implements OnInit {
   }
   get content(): FormControl {
     return this.articleForm.get('content') as FormControl;
+  }
+  get dialogTitle() {
+    return this.isEditMode ? 'Edit Article' : 'Add New Article';
+  }
+  get submitButtonLabel() {
+    return this.isEditMode ? 'Update' : 'Save';
   }
 
 }

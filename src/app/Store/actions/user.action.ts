@@ -10,3 +10,6 @@ export const loginFail = createAction("[auth page] Login Failed")
 export const duplicateUser = createAction("[auth page] Duplicate User", props<{email: string}>())
 export const duplicateUserSuccess = createAction("[auth page] Duplicate User", props<{isDuplicate: boolean}>())
 
+export const loadUser = createAction("[User page] load User")
+export const loadUserSuccess = createAction("[User page] load User Success", props<{list: IUser[]}>())
+export const loadUserFail = createAction("[User page] load User Fail", props<{errorMsg: string}>())

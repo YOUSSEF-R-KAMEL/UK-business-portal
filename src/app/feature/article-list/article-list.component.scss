@@ -25,3 +25,22 @@ img {
     padding: .5rem !important;
   }
 }
+
+.p-input-icon-left {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.p-input-icon-left i {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: #6c757d;
+}
+
+.p-input-icon-left input {
+  padding-left: 2.5rem !important;
+}

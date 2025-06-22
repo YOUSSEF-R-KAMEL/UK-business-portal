@@ -1,1 +1,101 @@
-<p>users works!</p>
+<div class="card pt-5">
+
+  <!-- Filters -->
+  <div class="filter-section flex gap-3">
+    <div class="flex-1">
+      <span class="p-input-icon-left w-full">
+        <i class="pi pi-search"></i>
+        <input
+          pInputText
+          type="text"
+          placeholder="Search users..."
+          [(ngModel)]="globalFilter"
+          (ngModelChange)="applyFilters()"
+          class="w-full" />
+      </span>
+    </div>
+  </div>
+
+  <!-- Table -->
+  @if (errorMsg) {
+    <div class="col-12">
+      <p-message severity="error" text="{{ errorMsg }}"></p-message>
+    </div>
+  }
+  @else {
+    <p-table
+    [value]="filteredUsers"
+    [paginator]="true"
+    [rows]="rows"
+    [totalRecords]="totalRecords"
+    [first]="first"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [rowsPerPageOptions]="[5, 10, 25, 50]"
+    (onPage)="onPageChange($event)"
+    styleClass="p-datatable-sm"
+    responsiveLayout="scroll">
+
+    <!-- Name Column -->
+    <ng-template pTemplate="header">
+      <tr>
+        <tr>
+          <th pSortableColumn="ID" style="min-width: 150px">
+            ID
+            <p-sortIcon field="name"></p-sortIcon>
+          </th>
+        <th pSortableColumn="name" style="min-width: 150px">
+          Name
+          <p-sortIcon field="name"></p-sortIcon>
+        </th>
+        <th pSortableColumn="email" style="min-width: 200px">
+          Email
+          <p-sortIcon field="email"></p-sortIcon>
+        </th>
+        <th pSortableColumn="phone" style="min-width: 120px">
+          Phone
+          <p-sortIcon field="phone"></p-sortIcon>
+        </th>
+        <th pSortableColumn="type" style="min-width: 100px">
+          Gender
+          <p-sortIcon field="type"></p-sortIcon>
+        </th>
+      </tr>
+    </ng-template>
+
+    <!-- Data Rows -->
+    <ng-template pTemplate="body" let-user>
+      <tr>
+        <td>
+          <div class="font-semibold">{{ user.id }}</div>
+        </td>
+        <td>
+          <div class="font-semibold">{{ user.name }}</div>
+        </td>
+        <td>
+          <a [href]="'mailto:' + user.email" class="text-blue-400">{{ user.email }}</a>
+        </td>
+        <td>
+          <div class="font-mono">{{ user.phone }}</div>
+        </td>
+        <td>
+          <div class="font-mono">{{ user.gender }}</div>
+        </td>
+      </tr>
+    </ng-template>
+
+    <!-- Empty State -->
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="7" class="text-center py-8">
+          <div class="text-gray-500">
+            <i class="pi pi-users text-4xl mb-3"></i>
+            <p class="text-lg">No users found</p>
+            <p class="text-sm">Try adjusting your search or filters</p>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  }
+</div>

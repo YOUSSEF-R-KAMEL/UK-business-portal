@@ -114,7 +114,6 @@ export class RegisterComponent {
   }
 
   duplicatedUser(){
-    console.log("sssssssssss")
     const email = this.registerForm.value.email as string
     if(email != ''){
       this.store.dispatch(duplicateUser({email: email}))

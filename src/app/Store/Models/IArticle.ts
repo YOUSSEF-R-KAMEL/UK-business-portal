@@ -1,10 +1,8 @@
 import { EntityState } from "@ngrx/entity";
 
 export interface IArticle {
-  source: {
-    id: string;
-    name: string;
-  };
+  id: number;
+  name: string;
   author: string;
   title: string;
   description: string;

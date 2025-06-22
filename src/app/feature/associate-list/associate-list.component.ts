@@ -12,18 +12,18 @@ import { TooltipModule } from 'primeng/tooltip';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { MessageModule } from 'primeng/message';
 import { ConfirmationService } from 'primeng/api';
-import { AddAssociateComponent } from '../add-associate/add-associate.component';
 import { IAssociate } from '../../Store/Models/IAssociate';
 import { getAssociateList, getErrorMsg } from '../../Store/selectors/associate.selectors';
 import { loadAssociate, deleteAssociate } from '../../Store/actions/associate.actions';
 import { showAlert } from '../../Store/actions/App.actions';
+import { AssociateDialogComponent } from '../associate-dialog/associate-dialog.component';
 
 @Component({
   selector: 'app-associate-list',
   imports: [
     FormsModule,
     ButtonModule,
-    AddAssociateComponent,
+    AssociateDialogComponent,
     TableModule,
     PaginatorModule,
     InputTextModule,
@@ -38,7 +38,7 @@ import { showAlert } from '../../Store/actions/App.actions';
   styleUrl: './associate-list.component.scss'
 })
 export class AssociateListComponent implements OnInit {
-  @ViewChild(AddAssociateComponent) addAssociateComponent!: AddAssociateComponent;
+  @ViewChild(AssociateDialogComponent) AssociateDialogComponent!: AssociateDialogComponent;
 
   private store = inject(Store);
   private confirmationService = inject(ConfirmationService);
@@ -58,7 +58,7 @@ export class AssociateListComponent implements OnInit {
   selectedStatus: boolean | null = null;
   errorMsg = '';
   showDialog() {
-    this.addAssociateComponent.showDialog();
+    this.AssociateDialogComponent.showDialog();
   }
 
   ngOnInit(): void {
@@ -121,17 +121,30 @@ export class AssociateListComponent implements OnInit {
 
   getGroupLabel(group: string): string {
     const groupMap: { [key: string]: string } = {
-      'development': 'Development',
-      'design': 'Design',
-      'marketing': 'Marketing',
-      'sales': 'Sales',
-      'hr': 'HR'
+      'the-washington-post': 'The Washington Post',
+      'fortune': 'Fortune',
+      'thestreet': 'TheStreet',
+      'wired': 'Wired',
+      'toms-guide': "Tom's Guide",
+      'hollywood-reporter': 'Hollywood Reporter',
+      'ambcrypto': 'AMBCrypto',
+      'financial-times': 'Financial Times',
+      'zdnet': 'ZDNet',
+      'motley-fool': 'Motley Fool',
+      'ksl-com': 'KSL.com',
+      'bloomberg': 'Bloomberg',
+      'stat': 'STAT',
+      'new-york-post': 'New York Post',
+      'cnn': 'CNN',
+      'bbc-news': 'BBC News',
+      'the-guardian': 'The Guardian'
     };
     return groupMap[group] || group;
   }
 
+
   editAssociate(associate: IAssociate) {
-    this.addAssociateComponent.showEditDialog(associate);
+    this.AssociateDialogComponent.showEditDialog(associate);
   }
 
   deleteAssociate(associate: IAssociate) {
