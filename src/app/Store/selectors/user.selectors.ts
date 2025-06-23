@@ -1,11 +1,11 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
 import { IUserModel } from "../Models/IUser";
-import { userAdapter } from "../state/user.state";
+import { authAdapter } from "../state/auth.state";
 
 const getUserState = createFeatureSelector<IUserModel>('user');
 export const isDuplicateUser = createSelector(getUserState, (state) => state.iasDuplicate)
 
-const UserSelector = userAdapter.getSelectors()
+const UserSelector = authAdapter.getSelectors()
 
 export const getUserList = createSelector(getUserState, UserSelector.selectAll)
 const selectEntities = createSelector(getUserState, UserSelector.selectEntities);

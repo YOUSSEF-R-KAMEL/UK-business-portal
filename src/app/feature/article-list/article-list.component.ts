@@ -22,6 +22,7 @@ import { CommonModule } from '@angular/common';
 import { WordSlicePipe } from './word-slice.pipe';
 import { RippleModule } from 'primeng/ripple';
 import { showAlert } from '../../Store/actions/App.actions';
+import { AuthService } from '../Services/auth.service';
 
 @Component({
   selector: 'app-article-list',
@@ -51,9 +52,11 @@ export class ArticleListComponent implements OnInit {
 
   private store = inject(Store);
   private confirmationService = inject(ConfirmationService);
+  _authService = inject(AuthService);
   showAll: boolean = false;
   num: number = 8
-
+  isUser = true
+  isLogged: boolean = false;
   articleList$: Observable<IArticle[]> = this.store.select(getArticleList);
   filteredArticles: IArticle[] = [];
   currentArticles: IArticle[] = [];
@@ -74,7 +77,12 @@ export class ArticleListComponent implements OnInit {
       this.currentArticles = articles;
       this.applyFilters();
     });
+    this._authService.user$.subscribe(loginData => {
+      this.isLogged = !!(loginData && loginData.user?.email);
+      this.isUser = loginData?.role === 'user';
+    });
   }
+
 
   applyFilters(): void {
     let filtered = [...this.currentArticles];

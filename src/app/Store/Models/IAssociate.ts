@@ -1,14 +1,16 @@
 import { EntityState } from "@ngrx/entity"
 
 export interface IAssociate {
-  id: number,
-  name: string,
-  email: string,
-  phone: string,
-  type: string,
-  address: string,
-  associateGroup: string,
-  status: boolean
+  id: number;
+  name: string;
+  email: string;
+  password: string;
+  phone: string;
+  gender: string;
+  address: string;
+  type: string;
+  associateGroup: string;
+  status: boolean;
 }
 
 export interface IAssociateState {

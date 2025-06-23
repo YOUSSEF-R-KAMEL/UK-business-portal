@@ -1,18 +1,14 @@
-// Ensure proper dropdown positioning in dialog
-::ng-deep .p-dialog {
-  overflow: scroll !important;
-}
-
-::ng-deep .p-dialog-content {
-  overflow: scroll !important;
-}
-
-// Fix dropdown panel positioning
-::ng-deep .p-dropdown-panel {
-  z-index: 1001 !important;
-}
-
-// Ensure form inputs don't interfere with dropdowns
-.form-field {
-  position: relative;
+::ng-deep {
+  .p-dialog, .p-dialog-content {
+    max-height: 100% !important;
+    .p-dropdown-panel {
+      z-index: 1001 !important;
+    }
+  }
+  .p-dialog-header {
+    padding: .7rem 1rem .5rem 1.5rem !important;
+  }
+  .form-field {
+    margin-bottom: .2rem !important;
+  }
 }

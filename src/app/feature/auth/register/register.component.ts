@@ -11,8 +11,8 @@ import { Store } from '@ngrx/store';
 import { RouterLink } from '@angular/router';
 import { FormInputComponent } from '../../../shared/form-input/form-input.component';
 import { IUser } from '../../../Store/Models/IUser';
-import { beginRegister, duplicateUser } from '../../../Store/actions/user.action';
 import { isDuplicateUser } from '../../../Store/selectors/user.selectors';
+import { beginRegister, duplicateUser } from '../../../Store/actions/auth.action';
 
 @Component({
   selector: 'app-register',

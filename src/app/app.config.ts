@@ -15,9 +15,10 @@ import { associateReducer } from './Store/reducers/associate.reducer';
 import { AssociateEffects } from './Store/effects/associate.effects';
 import { AppEffects } from './Store/effects/App.effects';
 import { UserReducer } from './Store/reducers/user.reducer';
-import { UserEffects } from './Store/effects/user.effect';
 import { ArticleReducer } from './Store/reducers/article.reducer';
 import { ArticleEffects } from './Store/effects/article.effects';
+import { UserEffects } from './Store/effects/user.effect';
+import { AuthEffects } from './Store/effects/auth.effect';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -57,7 +58,7 @@ export const appConfig: ApplicationConfig = {
       user: UserReducer,
       article: ArticleReducer
     }),
-    provideEffects([AssociateEffects, AppEffects, UserEffects, ArticleEffects]),
+    provideEffects([AssociateEffects, AppEffects, UserEffects, ArticleEffects, AuthEffects]),
     provideRouterStore(),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })
   ]

@@ -13,7 +13,7 @@ import { CardModule } from 'primeng/card';
 import { FormInputComponent } from '../../../shared/form-input/form-input.component';
 import { ToastService } from '../../Services/toast.service';
 import { IUserCred } from '../../../Store/Models/IUser';
-import { beginLogin } from '../../../Store/actions/user.action';
+import { beginLogin } from '../../../Store/actions/auth.action';
 
 @Component({
   selector: 'app-login',
@@ -55,6 +55,7 @@ export class LoginComponent implements OnInit {
       this.loginForm.markAllAsTouched();
     }
   }
+
 
   get email() {
     return this.loginForm.get('email');

@@ -44,6 +44,9 @@
 
 // Table styling improvements
 ::ng-deep .p-datatable {
+  span {
+    display: inline-block;
+  }
   .p-datatable-header {
     background: transparent;
     border: none;
