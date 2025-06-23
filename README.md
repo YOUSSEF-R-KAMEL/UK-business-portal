@@ -84,9 +84,3 @@ Contact: [se.youssefrafat@gmail.com](mailto:se.youssefrafat@gmail.com)
 * Lazy loading modules
 * Unit & e2e testing (Jasmine/Karma)
 * Full admin dashboard
-
----
-
-## ✅ License
-
-This project is open-source and available under the [MIT License](LICENSE).
