@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class AssociateService {
 
   private _httpClient = inject(HttpClient);
-  private baseUrl = 'http://localhost:3000/Associates';
+  private baseUrl = 'http://localhost:3000/associates';
 
   getAssociates(): Observable<IAssociate[]> {
     return this._httpClient.get<IAssociate[]>(this.baseUrl);
