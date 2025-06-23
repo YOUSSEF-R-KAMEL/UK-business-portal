@@ -18,13 +18,6 @@ It supports **user and associate login**, dynamic routing, full CRUD features, a
 
 ---
 
-## 📸 Screenshots
-
-> Add screenshots of Home, Login, Associates, Articles pages
-> (You can upload images to the GitHub `issues` and copy the image link)
-
----
-
 ## 🔧 Tech Stack
 
 * **Angular 17+**
